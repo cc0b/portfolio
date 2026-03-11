@@ -14,13 +14,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/calebli" target="_blank" rel="noopener noreferrer" className="hover:text-[#2B5797]">
+                <a href="https://www.linkedin.com/in/caleb-li-0b3084272/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2B5797]">
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/calebli" target="_blank" rel="noopener noreferrer" className="hover:text-[#2B5797]">
-                  GitHub
                 </a>
               </li>
             </ul>
