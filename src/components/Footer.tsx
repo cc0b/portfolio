@@ -18,6 +18,16 @@ export default function Footer() {
                   LinkedIn
                 </a>
               </li>
+              <li>
+                <a href="https://www.instagram.com/caleb.lii/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2B5797]">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.com/users/236757241372475393" target="_blank" rel="noopener noreferrer" className="hover:text-[#2B5797]">
+                  Discord
+                </a>
+              </li>
             </ul>
           </div>
           <div>

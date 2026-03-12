@@ -21,7 +21,9 @@ export default function About() {
 
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I'm Caleb Li, a penultimate-year Business Analytics & Information Systems student at the University of Auckland. I bridge the gap between business needs and technology through thoughtful product thinking and pragmatic engineering.
+                I'm Caleb Li, a penultimate-year Business Analytics & Information Systems student at the University of Auckland.
+                 I bridge the gap between business needs and technology through thoughtful product thinking and pragmatic engineering.
+                 I also like to make websites sometimes.
               </p>
 
               <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
@@ -29,6 +31,12 @@ export default function About() {
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+                <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
+                  <h3 className="font-bold text-[#2B5797] mb-2">Business Analytics</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Data visualization, requirements gathering, and translating business problems into technical solutions.
+                  </p>
+                </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
                   <h3 className="font-bold text-[#2B5797] mb-2">AI Solutions Engineering</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -39,12 +47,6 @@ export default function About() {
                   <h3 className="font-bold text-[#2B5797] mb-2">Full-Stack Development</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
                     Building modern web applications with Next.js, React, and Supabase. Clean code, thoughtful design, real impact.
-                  </p>
-                </div>
-                <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[#2B5797] mb-2">Business Analytics</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Data visualization, requirements gathering, and translating business problems into technical solutions.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
@@ -93,7 +95,7 @@ export default function About() {
                 I'm currently exploring opportunities in business analysis, product management, and AI solutions where I can leverage my technical skills and analytical mindset. I have hands-on experience coordinating large-scale events, building technology solutions from the ground up, and working in agile teams.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                When I'm not coding, you'll find me hiking, running, playing drums, or building tools for D&D campaigns.
+                When I'm not feeling productive, you'll find me hiking, running, gymming, playing drums, or running D&D campaigns.
               </p>
 
               <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
