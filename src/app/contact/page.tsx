@@ -3,6 +3,8 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
+import { FiMail } from 'react-icons/fi'
+import { FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa'
 
 export default function Contact() {
   return (
@@ -19,7 +21,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-              I'm always interested in hearing about new opportunities, collaborations, or just having a chat. Feel free to reach out!
+              I'm always interested in hearing about new opportunities, side projects, collaborations, or just having a chat. Feel free to reach out!
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
@@ -31,7 +33,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
               >
-                <div className="text-4xl mb-4">✉️</div>
+                <div className="flex justify-center mb-4"><FiMail className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
                   Email
                 </h2>
@@ -50,7 +52,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
               >
-                <div className="text-4xl mb-4">🔗</div>
+                <div className="flex justify-center mb-4"><FaLinkedin className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
                   LinkedIn
                 </h2>
@@ -69,7 +71,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
               >
-                <div className="text-4xl mb-4">📸</div>
+                <div className="flex justify-center mb-4"><FaInstagram className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
                   Instagram
                 </h2>
@@ -88,7 +90,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
               >
-                <div className="text-4xl mb-4">💬</div>
+                <div className="flex justify-center mb-4"><FaDiscord className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
                   Discord
                 </h2>
