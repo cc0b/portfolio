@@ -20,6 +20,13 @@ const projects = [
     demoUrl: 'https://velocity-bingo.vercel.app',
     slug: 'velocity-bingo',
   },
+  {
+    title: 'MANFRD Portfolio Website',
+    description: 'A portfolio website designed and built for a friend to showcase their work and personal brand.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    demoUrl: 'https://manfrd.vercel.app',
+    slug: 'manfrd-portfolio',
+  },
 ]
 
 export default function Projects() {

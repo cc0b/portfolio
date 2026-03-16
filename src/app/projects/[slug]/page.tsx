@@ -35,6 +35,31 @@ The project demonstrates my ability to:
       'Effective use of AI-assisted development',
     ],
   },
+  'manfrd-portfolio': {
+    title: "Friend's Portfolio Website",
+    description: "A clean, modern portfolio website designed and built for a friend to showcase their work and personal brand.",
+    fullDescription: `Designed and built a personal portfolio website for a friend, creating a polished online presence to showcase their work and skills.
+
+The project involved:
+- Translating their personal brand and aesthetic into a cohesive web design
+- Building a responsive, fast-loading site optimized for all devices
+- Crafting a clean, minimal layout that puts the focus on their work
+- Deploying and configuring the site for production`,
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    demoUrl: 'https://manfrd.vercel.app',
+    highlights: [
+      'Clean, minimal design tailored to personal brand',
+      'Fully responsive across mobile, tablet, and desktop',
+      'Fast performance and production deployment',
+      'Custom layout and visual identity',
+    ],
+    learnings: [
+      'Translating a client vision into a working product',
+      'Designing for someone else\'s personal brand',
+      'Balancing aesthetics with usability',
+      'End-to-end ownership of a client project',
+    ],
+  },
   'velocity-bingo': {
     title: 'Velocity Bingo Networking Game',
     description: 'A mobile-first interactive bingo game built for Velocity\'s 200+ person innovation event.',
@@ -117,16 +142,6 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                   className="px-6 py-2 bg-[#2B5797] text-white rounded-lg hover:bg-[#1e4073] transition-colors font-semibold"
                 >
                   Live Demo ↗
-                </a>
-              )}
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 border-2 border-[#2B5797] text-[#2B5797] rounded-lg hover:bg-[#f0f4f8] transition-colors font-semibold dark:hover:bg-gray-900"
-                >
-                  View on GitHub ↗
                 </a>
               )}
             </div>

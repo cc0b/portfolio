@@ -57,7 +57,7 @@ export default function Contact() {
                   LinkedIn
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Let's connect professionally
+Caleb Li
                 </p>
               </motion.a>
 
