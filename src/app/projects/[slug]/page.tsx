@@ -7,10 +7,12 @@ import { motion } from 'framer-motion'
 
 const projectDetails: { [key: string]: any } = {
   'note-taking-app': {
-    title: 'Note-Taking Web App',
+    title: 'Good Study',
     description: 'A full-stack note-taking application with real-time synchronization, user authentication, and a demo mode.',
-    fullDescription: `This project showcases modern full-stack development practices using Next.js and Supabase. Built with AI-assisted development, the app includes features like real-time note sync across devices, secure authentication, and a demo mode for trying out the app without signing up.
-    
+    fullDescription: `Before the semester started, I was setting up my notes in Notion — but found myself spending more time navigating its bloated interface than actually studying. I wanted something purpose-built for university: organized around semesters, courses, and tasks, with nothing in the way.
+
+So I built it myself. What started as a personal tool became a full-stack application with real-time sync, secure authentication, and a demo mode so anyone could try it without signing up. Every design decision was made with a student's workflow in mind — no unnecessary features, just a clean space to stay on top of coursework.
+
 The project demonstrates my ability to:
 - Design and implement a complete user authentication system
 - Build a responsive, intuitive UI with React and Tailwind CSS
