@@ -28,9 +28,11 @@ export default function ProjectCard({
       viewport={{ once: true }}
       className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-gray-900/50 transition-shadow group"
     >
-      <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797] transition-colors">
-        {title}
-      </h3>
+      <Link href={`/projects/${slug}`}>
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797] transition-colors hover:underline cursor-pointer">
+          {title}
+        </h3>
+      </Link>
       <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
 
       {/* Tech Stack */}

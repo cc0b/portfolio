@@ -63,19 +63,16 @@ The project involved:
   'velocity-bingo': {
     title: 'Velocity Bingo Networking Game',
     description: 'A mobile-first interactive bingo game built for Velocity\'s 200+ person innovation event.',
-    fullDescription: `Built for the Velocity innovation program\'s kick-off event, this web app served 200+ participants and achieved 2,700+ page visits. The project demonstrates my ability to ship fast, optimize for mobile, and handle scale.
+    fullDescription: `During a Velocity planning meeting, I noticed we were going to run a networking bingo activity using printed paper cards — a clunky experience for a 200+ person event where assigned seating made passing cards around nearly impossible. I saw an opportunity to solve a real problem on the spot.
 
-Key accomplishments:
-- Built and deployed in a tight timeline
-- Achieved 2,700+ page visits with zero downtime
-- Designed for mobile-first experience (crucial for an event app)
-- Client-side only implementation for simplicity and speed
-- Contributed to 444 pre-event ticket sales`,
+That same meeting, I started drafting a web-based version. Within a week, I had iterated on the design with the team and shipped a fully functional mobile-first bingo app — no installs, no friction, just a link. Attendees could play directly from their phones, fitting the fast-paced nature of the event.
+
+The result: 250+ page visits during the event with zero downtime, and a noticeably smoother networking experience. It was a small idea that turned into a tangible improvement — exactly the kind of initiative I enjoy taking.`,
     technologies: ['HTML', 'CSS', 'JavaScript', 'Mobile-First Design'],
     demoUrl: 'https://velocity-bingo.vercel.app',
     githubUrl: 'https://github.com/calebli/velocity-bingo',
     highlights: [
-      '400+ page visits',
+      '500+ page visits overall',
       'Mobile-first responsive design',
       'Fast, lightweight implementation',
       'Zero runtime dependencies',

@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: 'Velocity Bingo Networking Game',
-    description: 'A mobile-first interactive bingo game built for Velocity\'s 200+ person innovation event. Achieved 1,000+ page visits with client-side only implementation.',
+    description: 'A mobile-first interactive bingo game built for Velocity\'s 200+ person innovation event. Achieved 500+ page visits with client-side only implementation.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Mobile-First'],
     demoUrl: 'https://velocity-bingo.vercel.app',
     slug: 'velocity-bingo',
