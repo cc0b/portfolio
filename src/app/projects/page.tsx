@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: 'MANFRD Portfolio Website',
-    description: 'A portfolio website designed and built for a friend to showcase their work and personal brand.',
+    description: 'A portfolio website designed and built for a creative professional to showcase their work and personal brand.',
     technologies: ['Next.js', 'React', 'Tailwind CSS'],
     demoUrl: 'https://manfrd.vercel.app',
     slug: 'manfrd-portfolio',
@@ -60,18 +60,6 @@ export default function Projects() {
               />
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-16 p-8 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800"
-          >
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">More projects coming soon</h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              I'm actively building new projects and refining existing ones. Check back soon for updates, or reach out if you'd like to collaborate.
-            </p>
-          </motion.div>
         </section>
       </main>
       <Footer />

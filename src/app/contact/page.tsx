@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
 import { FiMail } from 'react-icons/fi'
-import { FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
 
 export default function Contact() {
   return (
@@ -61,43 +61,6 @@ Caleb Li
                 </p>
               </motion.a>
 
-              {/* Instagram */}
-              <motion.a
-                href="https://www.instagram.com/caleb.lii/"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
-              >
-                <div className="flex justify-center mb-4"><FaInstagram className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
-                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
-                  Instagram
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  @caleb.lii
-                </p>
-              </motion.a>
-
-              {/* Discord */}
-              <motion.a
-                href="https://discord.com/users/236757241372475393"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
-              >
-                <div className="flex justify-center mb-4"><FaDiscord className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
-                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
-                  Discord
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  @ccbs
-                </p>
-              </motion.a>
             </div>
           </motion.div>
         </section>

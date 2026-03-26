@@ -38,9 +38,9 @@ export default function About() {
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[#2B5797] mb-2">AI Solutions Engineering</h3>
+                  <h3 className="font-bold text-[#2B5797] mb-2">Building with AI Tools</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Leveraging AI tools to rapidly prototype and deploy functional solutions without overcomplicating the process.
+                    Leveraging AI tools to move faster, prototype ideas, and ship functional products without overcomplicating the process.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
@@ -92,7 +92,7 @@ export default function About() {
                 Background
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                I'm currently exploring opportunities in business analysis, product management, and AI solutions where I can leverage my technical skills and analytical mindset. I have hands-on experience coordinating large-scale events, building technology solutions from the ground up, and working in agile teams.
+                I'm currently exploring opportunities in business analysis and product management where I can leverage my technical skills and analytical mindset. I use AI tools to prototype and ship faster, moving from idea to working product quickly, and have hands-on experience coordinating large-scale events, building technology solutions from the ground up, and working in agile teams.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 When I'm not feeling productive, you'll find me hiking, running, gymming, playing drums, or running D&D campaigns.

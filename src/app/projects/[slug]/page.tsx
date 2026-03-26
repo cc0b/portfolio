@@ -39,7 +39,7 @@ The project demonstrates my ability to:
   },
   'manfrd-portfolio': {
     title: "Friend's Portfolio Website",
-    description: "A clean, modern portfolio website designed and built for a friend to showcase their work and personal brand.",
+    description: "A clean, modern portfolio website designed and built for a creative professional to showcase their work and personal brand.",
     fullDescription: `Designed and built a personal portfolio website for a friend, creating a polished online presence to showcase their work and skills.
 
 The project involved:
