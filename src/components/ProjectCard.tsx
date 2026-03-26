@@ -28,8 +28,8 @@ export default function ProjectCard({
       viewport={{ once: true }}
       className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-gray-900/50 transition-shadow group"
     >
-      <Link href={`/projects/${slug}`}>
-        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797] transition-colors hover:underline cursor-pointer">
+      <Link href={`/projects/${slug}`} style={{ textDecoration: 'none' }}>
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797] transition-colors cursor-pointer">
           {title}
         </h3>
       </Link>
