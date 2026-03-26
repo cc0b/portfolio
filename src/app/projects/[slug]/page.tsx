@@ -34,7 +34,7 @@ The project demonstrates my ability to:
       'Real-time data management with Supabase',
       'User authentication best practices',
       'UI/UX for productivity tools',
-      'Effective use of AI-assisted development',
+      'Open to new projects and collaborations',
     ],
   },
   'manfrd-portfolio': {

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     title: 'Good Study',
-    description: 'A full-stack note-taking application with real-time synchronization, authentication, and demo mode built with AI-assisted development.',
+    description: 'A full-stack note-taking application with real-time synchronization, authentication, and demo mode.',
     technologies: ['Next.js', 'React', 'Supabase', 'TypeScript', 'Tailwind CSS'],
     demoUrl: 'https://goodgoodstudy.vercel.app/demo',
     slug: 'note-taking-app',
@@ -44,7 +44,7 @@ export default function Projects() {
               Projects
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">
-              A selection of recent projects showcasing full-stack development, AI-assisted engineering, and rapid prototyping.
+              A selection of recent projects showcasing full-stack development, open to projects, and rapid prototyping.
             </p>
           </motion.div>
 

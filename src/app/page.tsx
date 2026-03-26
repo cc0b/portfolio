@@ -22,7 +22,7 @@ export default function Home() {
               Business Analytics <span className="text-[#2B5797]">&</span> Technology Student
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Bridging business and technology through analytics and AI-assisted development.
+              Bridging business and technology through analytics and open to projects.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
@@ -53,8 +53,8 @@ export default function Home() {
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Penultimate Year</p>
             </div>
 <div className="text-center">
-              <p className="text-3xl font-bold text-[#2B5797]">AI-Assisted</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Building with AI tools</p>
+              <p className="text-3xl font-bold text-[#2B5797]">Open To Projects</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Available for new opportunities</p>
             </div>
           </motion.div>
         </section>

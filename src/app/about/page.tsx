@@ -77,7 +77,7 @@ export default function About() {
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">Tools & Methods</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Agile/Scrum, Git, Vercel, Firebase, AI-Assisted Development
+                    Agile/Scrum, Git, Vercel, Firebase, Open To Projects
                   </p>
                 </div>
                 <div>
