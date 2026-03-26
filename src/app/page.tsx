@@ -22,7 +22,7 @@ export default function Home() {
               Business Analytics <span className="text-[#2B5797]">&</span> Technology Student
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Bridging business and technology through analytics and open to projects.
+              Studying how businesses use data. Building websites for the ones that need them.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
