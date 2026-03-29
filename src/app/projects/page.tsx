@@ -24,7 +24,7 @@ const projects = [
     title: 'MANFRD Portfolio Website',
     description: 'A portfolio website designed and built for a creative professional to showcase their work and personal brand.',
     technologies: ['Next.js', 'React', 'Tailwind CSS'],
-    demoUrl: 'https://manfrd.vercel.app',
+    demoUrl: 'https://manfrd.com',
     slug: 'manfrd-portfolio',
   },
 ]

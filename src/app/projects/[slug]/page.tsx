@@ -48,7 +48,7 @@ The project involved:
 - Crafting a clean, minimal layout that puts the focus on their work
 - Deploying and configuring the site for production`,
     technologies: ['Next.js', 'React', 'Tailwind CSS'],
-    demoUrl: 'https://manfrd.vercel.app',
+    demoUrl: 'https://manfrd.com',
     highlights: [
       'Clean, minimal design tailored to personal brand',
       'Fully responsive across mobile, tablet, and desktop',
