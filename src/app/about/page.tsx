@@ -22,7 +22,7 @@ export default function About() {
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
                 I'm Caleb Li, a penultimate-year Business Analytics & Information Systems student at the University of Auckland.
-                 I bridge the gap between business needs and technology through thoughtful product thinking and pragmatic engineering.
+                 I try to bridge the gap between business needs and tech through thoughtful product thinking and practical solutions.
                  I also like to make websites sometimes.
               </p>
 
