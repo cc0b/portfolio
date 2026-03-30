@@ -21,9 +21,9 @@ export default function About() {
 
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I'm Caleb Li, a penultimate-year Business Analytics & Information Systems student at the University of Auckland.
-                 I try to bridge the gap between business needs and tech through thoughtful product thinking and practical solutions.
-                 I also like to make websites sometimes.
+                I'm Caleb Li, a penultimate-year Business Analytics & Information Systems 
+                student at the University of Auckland. I'm interested in why businesses make the decisions they do, and how data can make those decisions better. 
+                 I also make websites sometimes.
               </p>
 
               <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
@@ -34,25 +34,25 @@ export default function About() {
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
                   <h3 className="font-bold text-[#2B5797] mb-2">Business Analytics</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Data visualization, requirements gathering, and translating business problems into technical solutions.
+                    Data visualization, requirements gathering, and translating business problems into technical solutions. Transforming data into insight.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
                   <h3 className="font-bold text-[#2B5797] mb-2">Building with AI Tools</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Leveraging AI tools to move faster, prototype ideas, and ship functional products without overcomplicating the process.
+                    Using AI tools to move faster, prototype ideas, and ship functional products without overcomplicating the processes.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
                   <h3 className="font-bold text-[#2B5797] mb-2">Full-Stack Development</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Building modern web applications with Next.js, React, and Supabase. Clean code, thoughtful design, real impact.
+                    Building modern web applications with Next.js, React, and Supabase. Clean code, thoughtful design.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
                   <h3 className="font-bold text-[#2B5797] mb-2">Computer Technician</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Hands-on experience diagnosing and resolving hardware and software issues. Fast problem solver.
+                    Hands-on experience diagnosing and resolving hardware and software issues. Fast at fixing problems.
                   </p>
                 </div>
               </div>
@@ -63,9 +63,9 @@ export default function About() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Backend & Databases</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Analysis & Data</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Next.js, Node.js, Supabase, SQL, TypeScript
+                    Tableau, Excel, Data Visualization, RStudio, SQL, Python
                   </p>
                 </div>
                 <div>
@@ -77,13 +77,13 @@ export default function About() {
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">Tools & Methods</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Agile/Scrum, Git, Vercel, Firebase, Open To Projects
+                    Agile/Scrum, Git, Vercel, Firebase
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Analysis & Data</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Backend & Databases</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Tableau, Excel, Data Visualization, Requirements Gathering
+                    Next.js, Node.js, Supabase, SQL, TypeScript
                   </p>
                 </div>
               </div>
