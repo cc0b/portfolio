@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #000000;
-  --background: #ffffff;
-  --primary: #2B5797;
-  --primary-light: #4472C4;
+  --foreground: #1A2B35;
+  --background: #F0F5F8;
+  --primary: #5B8FA8;
+  --primary-light: #7AADC4;
 }
 
 html.dark {
   --foreground: #ffffff;
-  --background: #0a0a0a;
+  --background: #0D1B24;
 }
 
 body {
@@ -37,8 +37,8 @@ body {
 }
 
 /* Smooth transitions */
-* {
-  transition: color 0.2s ease, background 0.2s ease;
+html.transitioning * {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease !important;
 }
 
 a {

@@ -100,7 +100,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
         <main className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-bold mb-4">Project not found</h1>
-            <Link href="/projects" className="text-[#2B5797] hover:underline">
+            <Link href="/projects" className="text-[#5B8FA8] hover:underline">
               ← Back to projects
             </Link>
           </div>
@@ -115,7 +115,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
       <Header />
       <main className="min-h-screen">
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <Link href="/projects" className="text-[#2B5797] hover:underline mb-8 inline-block">
+          <Link href="/projects" className="text-[#5B8FA8] hover:underline mb-8 inline-block">
             ← Back to projects
           </Link>
 
@@ -138,7 +138,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2 bg-[#2B5797] text-white rounded-lg hover:bg-[#1e4073] transition-colors font-semibold"
+                  className="px-6 py-2 bg-[#5B8FA8] text-white rounded-lg hover:bg-[#3D6B82] transition-colors font-semibold"
                 >
                   Live Demo ↗
                 </a>
@@ -180,7 +180,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
               <ul className="space-y-2">
                 {project.highlights.map((highlight: string) => (
                   <li key={highlight} className="text-gray-600 dark:text-gray-400 flex items-start">
-                    <span className="text-[#2B5797] mr-3 font-bold">✓</span>
+                    <span className="text-[#5B8FA8] mr-3 font-bold">✓</span>
                     {highlight}
                   </li>
                 ))}
@@ -195,7 +195,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
               <ul className="space-y-2">
                 {project.learnings.map((learning: string) => (
                   <li key={learning} className="text-gray-600 dark:text-gray-400 flex items-start">
-                    <span className="text-[#2B5797] mr-3 font-bold">→</span>
+                    <span className="text-[#5B8FA8] mr-3 font-bold">→</span>
                     {learning}
                   </li>
                 ))}
@@ -212,7 +212,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
               </p>
               <Link
                 href="/contact"
-                className="inline-block px-8 py-3 bg-[#2B5797] text-white rounded-lg hover:bg-[#1e4073] transition-colors font-semibold"
+                className="inline-block px-8 py-3 bg-[#5B8FA8] text-white rounded-lg hover:bg-[#3D6B82] transition-colors font-semibold"
               >
                 Get in Touch
               </Link>

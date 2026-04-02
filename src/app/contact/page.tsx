@@ -33,8 +33,8 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
               >
-                <div className="flex justify-center mb-4"><FiMail className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
-                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
+                <div className="flex justify-center mb-4"><FiMail className="text-5xl text-gray-700 dark:text-white group-hover:text-[#5B8FA8]" /></div>
+                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#5B8FA8]">
                   Email
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm break-all">
@@ -52,8 +52,8 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
               >
-                <div className="flex justify-center mb-4"><FaLinkedin className="text-5xl text-gray-700 dark:text-white group-hover:text-[#2B5797]" /></div>
-                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#2B5797]">
+                <div className="flex justify-center mb-4"><FaLinkedin className="text-5xl text-gray-700 dark:text-white group-hover:text-[#5B8FA8]" /></div>
+                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#5B8FA8]">
                   LinkedIn
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
