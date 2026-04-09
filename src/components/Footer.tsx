@@ -6,42 +6,42 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-[#5B8FA8] mb-4">Connect</h3>
+            <h3 className="font-bold text-[var(--primary)] mb-4">Connect</h3>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li>
-                <a href="mailto:caleb.nz.li@gmail.com" className="hover:text-[#5B8FA8]">
+                <a href="mailto:caleb.nz.li@gmail.com" className="hover:text-[var(--primary)]">
                   Email
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/caleb-li-0b3084272/" target="_blank" rel="noopener noreferrer" className="hover:text-[#5B8FA8]">
+                <a href="https://www.linkedin.com/in/caleb-li-0b3084272/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--primary)]">
                   LinkedIn
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-[#5B8FA8] mb-4">Explore</h3>
+            <h3 className="font-bold text-[var(--primary)] mb-4">Explore</h3>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li>
-                <a href="/" className="hover:text-[#5B8FA8]">
+                <a href="/" className="hover:text-[var(--primary)]">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/projects" className="hover:text-[#5B8FA8]">
+                <a href="/projects" className="hover:text-[var(--primary)]">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="/about" className="hover:text-[#5B8FA8]">
+                <a href="/about" className="hover:text-[var(--primary)]">
                   About
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-[#5B8FA8] mb-4">Tech Stack</h3>
+            <h3 className="font-bold text-[var(--primary)] mb-4">Tech Stack</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Built with Next.js, React, Tailwind CSS, and deployed on Vercel.
             </p>

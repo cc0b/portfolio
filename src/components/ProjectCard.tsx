@@ -29,7 +29,7 @@ export default function ProjectCard({
       className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-gray-900/50 transition-shadow group"
     >
       <Link href={`/projects/${slug}`} style={{ textDecoration: 'none' }}>
-        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#5B8FA8] transition-colors cursor-pointer">
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[var(--primary)] transition-colors cursor-pointer">
           {title}
         </h3>
       </Link>
@@ -49,7 +49,7 @@ export default function ProjectCard({
 
       {/* Links */}
       <div className="flex gap-4 flex-wrap">
-        <Link href={`/projects/${slug}`} className="text-[#5B8FA8] font-semibold hover:text-[#3D6B82] transition-colors">
+        <Link href={`/projects/${slug}`} className="text-[var(--primary)] font-semibold hover:text-[var(--primary-hover)] transition-colors">
           View Details →
         </Link>
         {demoUrl && (
@@ -57,7 +57,7 @@ export default function ProjectCard({
             href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#5B8FA8] font-semibold hover:text-[#3D6B82] transition-colors"
+            className="text-[var(--primary)] font-semibold hover:text-[var(--primary-hover)] transition-colors"
           >
             Live Demo ↗
           </a>
@@ -67,7 +67,7 @@ export default function ProjectCard({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#5B8FA8] font-semibold hover:text-[#3D6B82] transition-colors"
+            className="text-[var(--primary)] font-semibold hover:text-[var(--primary-hover)] transition-colors"
           >
             GitHub ↗
           </a>

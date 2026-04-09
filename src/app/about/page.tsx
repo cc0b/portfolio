@@ -32,25 +32,25 @@ export default function About() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[#5B8FA8] mb-2">Business Analytics</h3>
+                  <h3 className="font-bold text-[var(--primary)] mb-2">Business Analytics</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
                     Data visualization, requirements gathering, and translating business problems into technical solutions. Transforming data into insight.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[#5B8FA8] mb-2">Building with AI Tools</h3>
+                  <h3 className="font-bold text-[var(--primary)] mb-2">Building with AI Tools</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
                     Using AI tools to move faster, prototype ideas, and ship functional products without overcomplicating the processes.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[#5B8FA8] mb-2">Full-Stack Development</h3>
+                  <h3 className="font-bold text-[var(--primary)] mb-2">Full-Stack Development</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
                     Building modern web applications with Next.js, React, and Supabase. Clean code, thoughtful design.
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[#5B8FA8] mb-2">Computer Technician</h3>
+                  <h3 className="font-bold text-[var(--primary)] mb-2">Computer Technician</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
                     Hands-on experience diagnosing and resolving hardware and software issues. Fast at fixing problems.
                   </p>

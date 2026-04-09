@@ -19,7 +19,7 @@ export default function Home() {
             className="text-center"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Business Analytics <span className="text-[#5B8FA8]">&</span> Technology Student
+              Business Analytics <span className="text-[var(--primary)]">&</span> Technology Student
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
               Studying how businesses use data. I make websites too.
@@ -27,13 +27,13 @@ export default function Home() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/projects"
-                className="px-8 py-3 bg-[#5B8FA8] text-white rounded-lg hover:bg-[#3D6B82] transition-colors font-semibold"
+                className="px-8 py-3 bg-[var(--primary)] text-[var(--background)] rounded-lg hover:bg-[var(--primary-hover)] transition-colors font-semibold"
               >
                 View Projects
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3 border-2 border-[#5B8FA8] text-[#5B8FA8] rounded-lg hover:bg-[#f0f4f8] transition-colors font-semibold dark:hover:bg-gray-900"
+                className="px-8 py-3 border-2 border-[var(--primary)] text-[var(--primary)] rounded-lg hover:bg-[#f0f4f8] transition-colors font-semibold dark:hover:bg-gray-900"
               >
                 Get in Touch
               </Link>
@@ -48,12 +48,12 @@ export default function Home() {
             className="grid grid-cols-2 gap-4 sm:gap-8 mt-20 pt-20 border-t border-gray-200 dark:border-gray-800 max-w-sm mx-auto"
           >
             <div className="text-center">
-              <p className="text-3xl font-bold text-[#5B8FA8]">BA&IS</p>
+              <p className="text-3xl font-bold text-[var(--primary)]">BA&IS</p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Business Analytics & Information Systems</p>
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Penultimate Year</p>
             </div>
 <div className="text-center">
-              <p className="text-3xl font-bold text-[#5B8FA8]">Open To Projects</p>
+              <p className="text-3xl font-bold text-[var(--primary)]">Open To Projects</p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Available for new opportunities</p>
             </div>
           </motion.div>

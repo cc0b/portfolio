@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #1A2B35;
-  --background: #F0F5F8;
-  --primary: #5B8FA8;
-  --primary-light: #7AADC4;
+  --foreground: #171717;
+  --background: #ffffff;
+  --primary: #171717;
+  --primary-hover: #404040;
 }
 
 html.dark {
   --foreground: #ffffff;
-  --background: #0D1B24;
+  --background: #0a0a0a;
+  --primary: #ffffff;
+  --primary-hover: #d4d4d4;
 }
 
 body {
@@ -62,9 +64,12 @@ a:hover::after {
   width: 100%;
 }
 
-/* Remove link decoration on headings */
+/* Remove link decoration on headings, buttons, and nav */
 h1 a::after,
 h2 a::after,
-h3 a::after {
+h3 a::after,
+nav a::after,
+a[class*="px-"]::after,
+a[class*="rounded"]::after {
   display: none;
 }

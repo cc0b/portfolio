@@ -28,35 +28,45 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
-      <nav className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-[#5B8FA8]">
-          Caleb Li
-        </Link>
-        
+      <nav className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
+        <div className="flex-1">
+          <Link href="/" className="text-2xl font-bold text-[var(--primary)]">
+            Caleb Li
+          </Link>
+        </div>
+
         {/* Desktop Navigation */}
         <div className="hidden sm:flex gap-8">
-          <Link href="/" className="hover:text-[#5B8FA8] transition-colors">
+          <Link href="/" className="hover:text-[var(--primary)] transition-colors">
             Home
           </Link>
-          <Link href="/projects" className="hover:text-[#5B8FA8] transition-colors">
+          <Link href="/projects" className="hover:text-[var(--primary)] transition-colors">
             Projects
           </Link>
-          <Link href="/about" className="hover:text-[#5B8FA8] transition-colors">
+          <Link href="/about" className="hover:text-[var(--primary)] transition-colors">
             About
           </Link>
-          <Link href="/contact" className="hover:text-[#5B8FA8] transition-colors">
+          <Link href="/contact" className="hover:text-[var(--primary)] transition-colors">
             Contact
           </Link>
         </div>
 
         {/* Right side: toggle + mobile menu */}
-        <div className="flex items-center gap-2">
+        <div className="flex-1 flex items-center justify-end gap-2">
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-medium text-gray-600 dark:text-gray-400"
           >
-            {isDark ? 'Light' : 'Dark'}
+            {isDark ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07-6.07-.71.71M6.34 17.66l-.71.71m12.02 0-.71-.71M6.34 6.34l-.71-.71M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7z" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            )}
           </button>
 
           {/* Mobile Menu Button */}
@@ -75,16 +85,16 @@ export default function Header() {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 right-0 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 p-4 sm:hidden">
             <div className="flex flex-col gap-4">
-              <Link href="/" className="hover:text-[#5B8FA8]" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/" className="hover:text-[var(--primary)]" onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
-              <Link href="/projects" className="hover:text-[#5B8FA8]" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/projects" className="hover:text-[var(--primary)]" onClick={() => setIsMenuOpen(false)}>
                 Projects
               </Link>
-              <Link href="/about" className="hover:text-[#5B8FA8]" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/about" className="hover:text-[var(--primary)]" onClick={() => setIsMenuOpen(false)}>
                 About
               </Link>
-              <Link href="/contact" className="hover:text-[#5B8FA8]" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/contact" className="hover:text-[var(--primary)]" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </Link>
             </div>
