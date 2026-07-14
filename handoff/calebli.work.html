@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Caleb Li — BA&IS Student & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; }
+  button { font-family: inherit; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes revealUp {
+    from { transform: translateY(10px); }
+    to   { transform: translateY(0); }
+  }
+  /* Never animate (and never hide) when motion is reduced */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none !important; opacity: 1 !important; transform: none !important; }
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.25); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="portfolio-components.jsx"></script>
+<script type="text/babel">
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "#4cc9a0",
+  "darkMode": false,
+  "fontSize": 16
+}/*EDITMODE-END*/;
+
+function App() {
+  const [isDark, setDark] = React.useState(() => {
+    const saved = localStorage.getItem("cl-dark");
+    if (saved !== null) return saved === "true";
+    return TWEAK_DEFAULTS.darkMode;
+  });
+  const [page, setPage] = React.useState(() => localStorage.getItem("cl-page") || "Home");
+  const [transitioning, setTransitioning] = React.useState(false);
+  const [tweaksVisible, setTweaksVisible] = React.useState(false);
+  const [accent, setAccent] = React.useState(TWEAK_DEFAULTS.accentColor);
+
+  const t = React.useMemo(() => {
+    const base = isDark ? DARK : LIGHT;
+    return { ...base, accent, accentDim: accent + "22" };
+  }, [isDark, accent]);
+
+  // Persist
+  React.useEffect(() => { localStorage.setItem("cl-dark", isDark); }, [isDark]);
+  React.useEffect(() => { localStorage.setItem("cl-page", page); }, [page]);
+
+  // Tweaks protocol
+  React.useEffect(() => {
+    const handler = (e) => {
+      if (e.data?.type === "__activate_edit_mode") setTweaksVisible(true);
+      if (e.data?.type === "__deactivate_edit_mode") setTweaksVisible(false);
+    };
+    window.addEventListener("message", handler);
+    window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+    return () => window.removeEventListener("message", handler);
+  }, []);
+
+  const navigate = (p) => {
+    if (p === page) return;
+    setTransitioning(true);
+    setTimeout(() => { setPage(p); setTransitioning(false); window.scrollTo(0, 0); }, 200);
+  };
+
+  const setDarkAndPersist = (fn) => {
+    setDark(fn);
+  };
+
+  const pageProps = { page, setPage: navigate, isDark, setDark: setDarkAndPersist, t };
+
+  return (
+    <div style={{ background: t.bg, color: t.text, minHeight: "100vh", transition: "background 0.3s, color 0.3s" }}>
+      <Nav {...pageProps} />
+
+      <div style={{
+        opacity: transitioning ? 0 : 1,
+        transform: transitioning ? "translateY(10px)" : "translateY(0)",
+        transition: "opacity 0.2s, transform 0.2s",
+      }}>
+        {page === "Home"     && <HomePage     {...pageProps} />}
+        {(page === "Work" || page === "Projects") && <WorkPage {...pageProps} />}
+        {page === "About"    && <AboutPage    {...pageProps} />}
+        {page === "Contact"  && <ContactPage  {...pageProps} />}
+      </div>
+
+      {/* Tweaks Panel */}
+      {tweaksVisible && (
+        <div style={{
+          position: "fixed", bottom: 24, right: 24, zIndex: 999,
+          background: isDark ? "#1e1e1c" : "#fff",
+          border: `1px solid ${t.border}`,
+          padding: "24px", width: 260,
+          boxShadow: "0 8px 40px rgba(0,0,0,0.3)",
+          animation: "fadeIn 0.2s ease",
+          fontFamily: "'Inter', sans-serif",
+        }}>
+          <div style={{ fontFamily: "'Newsreader', serif", fontWeight: 500, fontSize: 15, color: t.text, marginBottom: 20, letterSpacing: "0" }}>Tweaks</div>
+
+          {/* Dark/Light */}
+          <div style={{ marginBottom: 20 }}>
+            <div style={{ fontSize: 11, color: t.muted, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>Color Mode</div>
+            <div style={{ display: "flex", gap: 8 }}>
+              {[["Dark", true], ["Light", false]].map(([label, val]) => (
+                <button key={label} onClick={() => { setDark(() => val); window.parent.postMessage({ type: "__edit_mode_set_keys", edits: { darkMode: val } }, "*"); }} style={{
+                  flex: 1, padding: "8px", background: isDark === val ? t.accent : "none",
+                  border: `1px solid ${isDark === val ? t.accent : t.border}`,
+                  color: isDark === val ? "#fff" : t.muted,
+                  fontSize: 12, cursor: "pointer", letterSpacing: "0.06em",
+                }}>{label}</button>
+              ))}
+            </div>
+          </div>
+
+          {/* Page jump */}
+          <div>
+            <div style={{ fontSize: 11, color: t.muted, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>Jump to Page</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+              {["Home", "Work", "About", "Contact"].map(p => (
+                <button key={p} onClick={() => navigate(p)} style={{
+                  background: page === p ? t.accentDim : "none",
+                  border: `1px solid ${page === p ? t.accent : t.border}`,
+                  color: page === p ? t.accent : t.muted,
+                  fontSize: 12, padding: "8px 12px", cursor: "pointer",
+                  textAlign: "left", letterSpacing: "0.06em",
+                }}>{p}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

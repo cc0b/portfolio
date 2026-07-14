@@ -1,61 +1,31 @@
-export default function Footer() {
-  const currentYear = new Date().getFullYear()
+import { SERIF } from '@/lib/typography'
 
+export default function Footer() {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 className="font-bold text-[var(--primary)] mb-4">Connect</h3>
-            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <a href="mailto:caleb.nz.li@gmail.com" className="hover:text-[var(--primary)]">
-                  Email
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/caleb-li-0b3084272/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--primary)]">
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-[var(--primary)] mb-4">Explore</h3>
-            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <a href="/" className="hover:text-[var(--primary)]">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/projects" className="hover:text-[var(--primary)]">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-[var(--primary)]">
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-[var(--primary)] mb-4">Tech Stack</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Built with Next.js, React, Tailwind CSS, and deployed on Vercel.
-            </p>
-          </div>
-        </div>
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 flex justify-between items-center">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            © {currentYear} Caleb Li. All rights reserved.
-          </p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Ngā mihi nui
-          </p>
-        </div>
-      </div>
+    <footer
+      style={{
+        borderTop: '1px solid var(--cl-border)',
+        padding: '32px 56px',
+        maxWidth: 1180,
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: '60px 1fr 1fr 1fr',
+        gap: 48,
+        alignItems: 'baseline',
+      }}
+    >
+      <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 12, color: 'var(--cl-muted)', fontWeight: 300 }}>
+        fin.
+      </span>
+      <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', fontStyle: 'italic' }}>
+        Ngā mihi nui
+      </span>
+      <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', textAlign: 'center' }}>
+        Set in Newsreader & Inter
+      </span>
+      <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', textAlign: 'right' }}>
+        © 2026 · Auckland
+      </span>
     </footer>
   )
 }

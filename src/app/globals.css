@@ -1,75 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --foreground: #171717;
-  --background: #ffffff;
-  --primary: #171717;
-  --primary-hover: #404040;
+  --cl-bg: #f6f3ec;
+  --cl-bg2: #ede9df;
+  --cl-border: rgba(20, 19, 15, 0.09);
+  --cl-text: #1a1916;
+  --cl-muted: rgba(20, 19, 15, 0.42);
+  --cl-faint: rgba(20, 19, 15, 0.14);
+  --cl-accent: #3a9f7e;
+  --cl-accent-dim: rgba(58, 159, 126, 0.08);
 }
 
 html.dark {
-  --foreground: #ffffff;
-  --background: #0a0a0a;
-  --primary: #ffffff;
-  --primary-hover: #d4d4d4;
+  --cl-bg: #0e0e0d;
+  --cl-bg2: #141413;
+  --cl-border: rgba(232, 228, 216, 0.07);
+  --cl-text: #e8e4d8;
+  --cl-muted: rgba(232, 228, 216, 0.42);
+  --cl-faint: rgba(232, 228, 216, 0.16);
+  --cl-accent: #4cc9a0;
+  --cl-accent-dim: rgba(76, 201, 160, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  overflow-x: hidden;
+  background: var(--cl-bg);
+  color: var(--cl-text);
+  font-family: var(--font-newsreader), Georgia, serif;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Custom scroll animations */
-@keyframes scrollReveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.scroll-reveal {
-  animation: scrollReveal 0.6s ease-out forwards;
-}
-
-/* Smooth transitions */
-html.transitioning * {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease !important;
+button {
+  font-family: inherit;
 }
 
 a {
-  color: var(--primary);
+  color: inherit;
   text-decoration: none;
-  position: relative;
 }
 
-a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  transition: width 0.3s ease;
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
 }
 
-a:hover::after {
-  width: 100%;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Remove link decoration on headings, buttons, and nav */
-h1 a::after,
-h2 a::after,
-h3 a::after,
-nav a::after,
-a[class*="px-"]::after,
-a[class*="rounded"]::after {
-  display: none;
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.25);
+  border-radius: 3px;
 }

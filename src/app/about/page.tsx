@@ -1,114 +1,159 @@
 'use client'
 
-import Header from '@/components/Header'
+import { Fragment, useEffect, useState } from 'react'
+import Link from 'next/link'
 import Footer from '@/components/Footer'
-import { motion } from 'framer-motion'
+import SectionHeader from '@/components/SectionHeader'
+import { SERIF, LABEL } from '@/lib/typography'
+
+const facts = [
+  { k: 'Education', v: 'BCom · Business Analytics & Information Systems' },
+  { k: 'University', v: 'The University of Auckland' },
+  { k: 'Year', v: 'Second year, 2026' },
+  { k: 'Also', v: 'Certificate in Web Development' },
+  { k: 'Based', v: 'Auckland, Aotearoa New Zealand' },
+]
+
+const stack = ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Supabase', 'Node', 'Postgres', 'SQL', 'Tableau', 'Figma', 'Git']
+
+const off = ['Drumming', 'Guitar', 'Hiking', 'Camping', 'Gym', 'Cooking', 'Reading']
 
 export default function About() {
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY < 50)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <>
-      <Header />
-      <main className="min-h-screen">
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
-              About Me
+    <div style={{ paddingTop: 76, minHeight: '100vh' }}>
+      <button
+        onClick={() => window.scrollBy({ top: window.innerHeight * 0.6, behavior: 'smooth' })}
+        style={{
+          position: 'fixed', bottom: 40, left: '50%',
+          transform: 'translateX(-50%)',
+          opacity: visible ? 1 : 0, transition: 'opacity 0.4s ease',
+          animation: visible ? 'bounce 1.8s ease-in-out infinite' : 'none',
+          background: 'none', border: 'none', cursor: 'pointer', padding: 8,
+          zIndex: 50,
+        }}
+        aria-label="Scroll down"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ color: 'var(--cl-muted)', display: 'block' }}>
+          <path d="M10 3v14M3 10l7 7 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 280px', gap: 48, alignItems: 'start', marginBottom: 120 }}>
+          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
+            § 02
+          </span>
+
+          <div>
+            <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 28 }}>About</p>
+            <h1
+              style={{
+                fontFamily: SERIF,
+                fontWeight: 300,
+                fontSize: 19,
+                letterSpacing: '-0.01em',
+                color: 'var(--cl-text)',
+                marginBottom: 24,
+                lineHeight: 1.7,
+                maxWidth: 620,
+              }}
+            >
+              I&apos;m Caleb, a Commerce student at the University of Auckland.
             </h1>
+            <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 620, marginBottom: 24 }}>
+              I&apos;m majoring in Business Analytics &amp; Information Systems, with a Certificate in Web Development on the side.
+            </p>
+            <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 620 }}>
+              I build small web tools, play the drums and guitar, and spend most weekends outside the city.
+            </p>
+          </div>
 
-            <div className="prose dark:prose-invert max-w-none">
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I'm Caleb Li, a penultimate-year Business Analytics & Information Systems 
-                student at the University of Auckland. I'm interested in why businesses make the decisions they do, and how data can make those decisions better. 
-                 I also make websites sometimes.
-              </p>
-
-              <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
-                What I Do
-              </h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
-                <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[var(--primary)] mb-2">Business Analytics</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Data visualization, requirements gathering, and translating business problems into technical solutions. Transforming data into insight.
-                  </p>
+          <div style={{ paddingTop: 12 }}>
+            <div style={{ borderTop: '1px solid var(--cl-border)', paddingTop: 16 }}>
+              <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 16 }}>Quick facts</p>
+              {facts.map((f, i) => (
+                <div key={i} style={{ paddingBottom: 12, marginBottom: 12, borderBottom: i < facts.length - 1 ? '1px solid var(--cl-border)' : 'none' }}>
+                  <p style={{ ...LABEL, color: 'var(--cl-muted)', fontSize: 10, marginBottom: 4 }}>{f.k}</p>
+                  <p style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-text)', lineHeight: 1.5 }}>{f.v}</p>
                 </div>
-                <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[var(--primary)] mb-2">Building with AI Tools</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Using AI tools to move faster, prototype ideas, and ship functional products without overcomplicating the processes.
-                  </p>
-                </div>
-                <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[var(--primary)] mb-2">Full-Stack Development</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Building modern web applications with Next.js, React, and Supabase. Clean code, thoughtful design.
-                  </p>
-                </div>
-                <div className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg">
-                  <h3 className="font-bold text-[var(--primary)] mb-2">Computer Technician</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Hands-on experience diagnosing and resolving hardware and software issues. Fast at fixing problems.
-                  </p>
-                </div>
-              </div>
-
-              <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
-                Skills
-              </h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Analysis & Data</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Tableau, Excel, Data Visualization, RStudio, SQL, Python
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Frontend</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    React, HTML/CSS, Tailwind CSS, Responsive Design
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Tools & Methods</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Agile/Scrum, Git, Vercel, Firebase
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-3">Backend & Databases</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Next.js, Node.js, Supabase, SQL, TypeScript
-                  </p>
-                </div>
-              </div>
-
-              <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
-                Background
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                I'm currently exploring opportunities in business analysis and product management where I can leverage my technical skills and analytical mindset. I use AI tools to prototype and ship faster, moving from idea to working product quickly, and have hands-on experience coordinating large-scale events, building technology solutions from the ground up, and working in agile teams.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                When I'm not feeling productive, you'll find me hiking, running, gymming, playing drums, or running D&D campaigns.
-              </p>
-
-              <h2 className="text-2xl font-bold mt-12 mb-4 text-gray-900 dark:text-white">
-                Let's Connect
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Interested in working together? Reach out via email or LinkedIn — I'm always open to new opportunities and conversations.
-              </p>
+              ))}
             </div>
-          </motion.div>
-        </section>
-      </main>
+          </div>
+        </div>
+
+        {/* Tools */}
+        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 48, marginBottom: 100 }}>
+          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>03</span>
+          <div>
+            <SectionHeader num="" label="Tools" />
+            <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: 36, rowGap: 14 }}>
+              {stack.map((s, i) => (
+                <span key={s} style={{ fontFamily: SERIF, fontSize: 19, color: 'var(--cl-text)', fontWeight: 400 }}>
+                  {s}
+                  {i < stack.length - 1 && <span style={{ color: 'var(--cl-muted)' }}>,</span>}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Off the clock */}
+        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 48, marginBottom: 100 }}>
+          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>04</span>
+          <div>
+            <SectionHeader num="" label="Other interests" />
+            <p style={{ fontFamily: SERIF, fontSize: 24, lineHeight: 1.5, color: 'var(--cl-text)', fontWeight: 400, fontStyle: 'italic', maxWidth: 720 }}>
+              {off.map((o, i) => (
+                <Fragment key={o}>
+                  <span style={{ fontStyle: 'normal' }}>{o}</span>
+                  {i < off.length - 1 ? <span style={{ color: 'var(--cl-muted)', fontStyle: 'normal' }}>{' · '}</span> : '.'}
+                </Fragment>
+              ))}
+            </p>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 48 }}>
+          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>05</span>
+          <div
+            style={{
+              paddingTop: 32,
+              borderTop: '1px solid var(--cl-border)',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'baseline',
+              flexWrap: 'wrap',
+              gap: 24,
+            }}
+          >
+            <p style={{ fontFamily: SERIF, fontSize: 22, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 540 }}>
+              Open to internships, freelance, and any project worth doing carefully.
+            </p>
+            <Link
+              href="/contact"
+              style={{
+                fontFamily: SERIF,
+                fontStyle: 'italic',
+                fontSize: 18,
+                color: 'var(--cl-text)',
+                borderBottom: '1px solid var(--cl-text)',
+                paddingBottom: 4,
+              }}
+            >
+              Get in touch →
+            </Link>
+          </div>
+        </div>
+      </div>
       <Footer />
-    </>
+    </div>
   )
 }

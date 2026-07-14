@@ -1,70 +1,114 @@
 'use client'
 
-import Header from '@/components/Header'
+import { useState } from 'react'
 import Footer from '@/components/Footer'
-import { motion } from 'framer-motion'
-import { FiMail } from 'react-icons/fi'
-import { FaLinkedin } from 'react-icons/fa'
+import { SERIF, LABEL } from '@/lib/typography'
+
+const links = [
+  { label: 'Email', value: 'caleb.nz.li@gmail.com', href: 'mailto:caleb.nz.li@gmail.com', copyable: true },
+  { label: 'LinkedIn', value: 'linkedin.com/in/caleb-li-0b3084272', href: 'https://www.linkedin.com/in/caleb-li-0b3084272/', copyable: false },
+  { label: 'Instagram', value: '@caleb.lii', href: 'https://www.instagram.com/caleb.lii/', copyable: false },
+  { label: 'GitHub', value: 'github.com/cc0b', href: 'https://github.com/cc0b', copyable: false },
+]
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  function copy() {
+    navigator.clipboard.writeText('caleb.nz.li@gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-gray-900 dark:text-white text-center">
-              Get in Touch
+    <div style={{ paddingTop: 76, minHeight: '100vh' }}>
+      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 280px', gap: 48, alignItems: 'start' }}>
+          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
+            § 03
+          </span>
+
+          <div>
+            <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 28 }}>Contact</p>
+            <h1
+              style={{
+                fontFamily: SERIF,
+                fontWeight: 300,
+                fontSize: 64,
+                letterSpacing: '-0.022em',
+                color: 'var(--cl-text)',
+                marginBottom: 64,
+                lineHeight: 1.05,
+                maxWidth: 720,
+              }}
+            >
+              Get in touch.
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-              I'm always interested in hearing about new opportunities, side projects, collaborations, or just having a chat. Feel free to reach out!
-            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-              {/* Email */}
-              <motion.a
-                href="mailto:caleb.nz.li@gmail.com"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
+            {links.map((l, i) => (
+              <div
+                key={l.label}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '100px 1fr auto',
+                  gap: 32,
+                  alignItems: 'baseline',
+                  padding: '24px 0',
+                  borderTop: i === 0 ? '1px solid var(--cl-border)' : 'none',
+                  borderBottom: '1px solid var(--cl-border)',
+                }}
               >
-                <div className="flex justify-center mb-4"><FiMail className="text-5xl text-gray-700 dark:text-white group-hover:text-[var(--primary)]" /></div>
-                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[var(--primary)]">
-                  Email
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm break-all">
-                  caleb.nz.li@gmail.com
-                </p>
-              </motion.a>
+                <span style={{ ...LABEL, color: 'var(--cl-muted)' }}>{l.label}</span>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ fontFamily: SERIF, fontSize: 22, color: 'var(--cl-text)', fontWeight: 400, letterSpacing: '-0.005em' }}
+                >
+                  {l.value}
+                </a>
+                {l.copyable ? (
+                  <button
+                    onClick={copy}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      padding: 0,
+                      fontFamily: SERIF,
+                      fontStyle: 'italic',
+                      fontSize: 13,
+                      color: copied ? 'var(--cl-text)' : 'var(--cl-muted)',
+                      transition: 'color 0.2s',
+                    }}
+                  >
+                    {copied ? 'copied' : 'copy'}
+                  </button>
+                ) : (
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)' }}
+                  >
+                    open →
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
 
-              {/* LinkedIn */}
-              <motion.a
-                href="https://www.linkedin.com/in/caleb-li-0b3084272/"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="border border-gray-200 dark:border-gray-800 p-8 rounded-lg hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all text-center group"
-              >
-                <div className="flex justify-center mb-4"><FaLinkedin className="text-5xl text-gray-700 dark:text-white group-hover:text-[var(--primary)]" /></div>
-                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[var(--primary)]">
-                  LinkedIn
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-Caleb Li
-                </p>
-              </motion.a>
-
+          <div style={{ paddingTop: 12 }}>
+            <div style={{ borderTop: '1px solid var(--cl-border)', paddingTop: 16 }}>
+              <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 10 }}>Reply time</p>
+              <p style={{ fontFamily: SERIF, fontSize: 14, lineHeight: 1.6, color: 'var(--cl-text)' }}>Usually within a day or two.</p>
+              <p style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, lineHeight: 1.6, color: 'var(--cl-muted)', marginTop: 16, fontWeight: 300 }}>
+                Auckland time, NZST (UTC+12).
+              </p>
             </div>
-          </motion.div>
-        </section>
-      </main>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   )
