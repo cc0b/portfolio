@@ -20,10 +20,8 @@ export default function Footer() {
       <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', fontStyle: 'italic' }}>
         Ngā mihi nui
       </span>
-      <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', textAlign: 'center' }}>
-        Set in Newsreader & Inter
-      </span>
-      <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', textAlign: 'right' }}>
+      <span />
+<span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', textAlign: 'right' }}>
         © 2026 · Auckland
       </span>
     </footer>

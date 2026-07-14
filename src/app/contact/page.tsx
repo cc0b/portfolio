@@ -6,9 +6,8 @@ import { SERIF, LABEL } from '@/lib/typography'
 
 const links = [
   { label: 'Email', value: 'caleb.nz.li@gmail.com', href: 'mailto:caleb.nz.li@gmail.com', copyable: true },
-  { label: 'LinkedIn', value: 'linkedin.com/in/caleb-li-0b3084272', href: 'https://www.linkedin.com/in/caleb-li-0b3084272/', copyable: false },
+  { label: 'LinkedIn', value: 'linkedin.com/in/caleblii', href: 'https://www.linkedin.com/in/caleblii/', copyable: false },
   { label: 'Instagram', value: '@caleb.lii', href: 'https://www.instagram.com/caleb.lii/', copyable: false },
-  { label: 'GitHub', value: 'github.com/cc0b', href: 'https://github.com/cc0b', copyable: false },
 ]
 
 export default function Contact() {
