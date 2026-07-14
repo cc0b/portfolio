@@ -55,11 +55,11 @@ export default function Work() {
   return (
     <div style={{ paddingTop: 76, minHeight: '100vh' }}>
       <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
-        <SectionHeader num="01" label="Work · An index" />
+        <SectionHeader num="02" label="Work · An index" />
 
         <div style={{ display: 'grid', gridTemplateColumns: '60px 240px 1fr', gap: 48, alignItems: 'start' }}>
           <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 8 }}>
-            §
+            § 02
           </span>
 
           <div style={{ position: 'sticky', top: 110 }}>

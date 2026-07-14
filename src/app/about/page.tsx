@@ -48,7 +48,7 @@ export default function About() {
       <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 280px', gap: 48, alignItems: 'start', marginBottom: 120 }}>
           <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
-            § 02
+            § 03
           </span>
 
           <div>
@@ -135,7 +135,7 @@ export default function About() {
             }}
           >
             <p style={{ fontFamily: SERIF, fontSize: 22, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 540 }}>
-              Open to internships, freelance, and any project worth doing carefully.
+              Open to internships, freelance, and projects.
             </p>
             <Link
               href="/contact"

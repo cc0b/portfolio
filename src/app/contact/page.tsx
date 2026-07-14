@@ -24,7 +24,7 @@ export default function Contact() {
       <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 280px', gap: 48, alignItems: 'start' }}>
           <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
-            § 03
+            § 04
           </span>
 
           <div>

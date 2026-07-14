@@ -14,10 +14,8 @@ export default function Footer() {
         alignItems: 'baseline',
       }}
     >
-      <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 12, color: 'var(--cl-muted)', fontWeight: 300 }}>
-        fin.
-      </span>
-      <span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', fontStyle: 'italic' }}>
+      <span />
+<span style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-muted)', fontStyle: 'italic' }}>
         Ngā mihi nui
       </span>
       <span />

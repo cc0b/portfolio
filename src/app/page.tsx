@@ -21,7 +21,7 @@ export default function Home() {
       <section style={{ minHeight: 'calc(100vh - 76px)', padding: '140px 56px 80px', maxWidth: 1180, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 220px', gap: 48, alignItems: 'start' }}>
           <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
-            § 00
+            § 01
           </span>
 
           <div>
