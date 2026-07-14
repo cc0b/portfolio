@@ -18,6 +18,16 @@ const projects = [
   },
   {
     id: 2,
+    name: 'Form',
+    tag: 'AI personal trainer, computer vision',
+    year: '2025',
+    stack: ['Python', 'MediaPipe'],
+    role: 'Lead developer, team of three',
+    desc: "Proof of concept for an AI personal trainer — uses MediaPipe to analyse squat form live via webcam, counting reps and flagging good and bad technique. The broader vision: train models on labelled form videos across sports to make coaching accessible and injury prevention more affordable than a human trainer.",
+    link: 'https://formchecker-demo.vercel.app/',
+  },
+  {
+    id: 3,
     name: 'Velocity Bingo',
     tag: 'Event networking game',
     year: '2025',
@@ -27,7 +37,7 @@ const projects = [
     link: 'https://velocity-bingo.vercel.app',
   },
   {
-    id: 3,
+    id: 4,
     name: 'MANFRD',
     tag: 'Personal site for a friend',
     year: '2024',
@@ -35,16 +45,6 @@ const projects = [
     role: 'Visual design + development',
     desc: "A portfolio website for a friend's personal brand. Clean typography, fast performance, considered details.",
     link: 'https://manfrd.vercel.app',
-  },
-  {
-    id: 4,
-    name: 'Form',
-    tag: 'AI personal trainer, computer vision',
-    year: '2025',
-    stack: ['Python', 'MediaPipe'],
-    role: 'Lead developer, team of three',
-    desc: "Proof of concept for an AI personal trainer — uses MediaPipe to analyse squat form live via webcam, counting reps and flagging good and bad technique. The broader vision: train models on labelled form videos across sports to make coaching accessible and injury prevention more affordable than a human trainer.",
-    link: null,
   },
 ]
 
