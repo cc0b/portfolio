@@ -47,7 +47,8 @@ export default function About() {
       </button>
 
       <div className="page-inner">
-        <div className="aside-grid" style={{ marginBottom: 120 }}>
+        {/* Hero: bio + photo */}
+        <div className="aside-grid" style={{ marginBottom: 48 }}>
           <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
             § 03
           </span>
@@ -56,14 +57,9 @@ export default function About() {
             <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 28 }}>About</p>
             <h1
               style={{
-                fontFamily: SERIF,
-                fontWeight: 300,
-                fontSize: 19,
-                letterSpacing: '-0.01em',
-                color: 'var(--cl-text)',
-                marginBottom: 24,
-                lineHeight: 1.7,
-                maxWidth: 620,
+                fontFamily: SERIF, fontWeight: 300, fontSize: 19,
+                letterSpacing: '-0.01em', color: 'var(--cl-text)',
+                marginBottom: 24, lineHeight: 1.7, maxWidth: 620,
               }}
             >
               I&apos;m Caleb, a Commerce student at the University of Auckland.
@@ -76,22 +72,21 @@ export default function About() {
             </p>
           </div>
 
-          <div style={{ paddingTop: 12 }}>
-            <img
-              src="/96350E34-3882-4F98-B797-66724435407E.PNG"
-              alt="Caleb Li"
-              style={{ width: '100%', display: 'block', marginBottom: 24, borderRadius: 3 }}
-            />
-            <div style={{ borderTop: '1px solid var(--cl-border)', paddingTop: 16 }}>
-              <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 16 }}>Quick facts</p>
-              {facts.map((f, i) => (
-                <div key={i} style={{ paddingBottom: 12, marginBottom: 12, borderBottom: i < facts.length - 1 ? '1px solid var(--cl-border)' : 'none' }}>
-                  <p style={{ ...LABEL, color: 'var(--cl-muted)', fontSize: 10, marginBottom: 4 }}>{f.k}</p>
-                  <p style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-text)', lineHeight: 1.5 }}>{f.v}</p>
-                </div>
-              ))}
+          <img
+            src="/96350E34-3882-4F98-B797-66724435407E.PNG"
+            alt="Caleb Li"
+            className="about-photo"
+          />
+        </div>
+
+        {/* Quick facts — horizontal row */}
+        <div className="about-facts">
+          {facts.map((f) => (
+            <div key={f.k}>
+              <p style={{ ...LABEL, color: 'var(--cl-muted)', fontSize: 10, marginBottom: 8 }}>{f.k}</p>
+              <p style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-text)', lineHeight: 1.6 }}>{f.v}</p>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* Tools */}
@@ -146,12 +141,8 @@ export default function About() {
             <Link
               href="/contact"
               style={{
-                fontFamily: SERIF,
-                fontStyle: 'italic',
-                fontSize: 18,
-                color: 'var(--cl-text)',
-                borderBottom: '1px solid var(--cl-text)',
-                paddingBottom: 4,
+                fontFamily: SERIF, fontStyle: 'italic', fontSize: 18,
+                color: 'var(--cl-text)', borderBottom: '1px solid var(--cl-text)', paddingBottom: 4,
               }}
             >
               Get in touch →
