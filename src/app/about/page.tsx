@@ -78,7 +78,7 @@ export default function About() {
 
           <div style={{ paddingTop: 12 }}>
             <img
-              src="/caleb.jpg"
+              src="/96350E34-3882-4F98-B797-66724435407E.PNG"
               alt="Caleb Li"
               style={{ width: '100%', display: 'block', marginBottom: 24, borderRadius: 3 }}
             />
