@@ -77,6 +77,11 @@ export default function About() {
           </div>
 
           <div style={{ paddingTop: 12 }}>
+            <img
+              src="/caleb.jpg"
+              alt="Caleb Li"
+              style={{ width: '100%', display: 'block', marginBottom: 24, borderRadius: 3 }}
+            />
             <div style={{ borderTop: '1px solid var(--cl-border)', paddingTop: 16 }}>
               <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 16 }}>Quick facts</p>
               {facts.map((f, i) => (

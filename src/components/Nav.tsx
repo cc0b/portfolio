@@ -80,10 +80,6 @@ export default function Nav() {
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-        <span style={{ ...LABEL, color: 'var(--cl-muted)', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ width: 5, height: 5, background: 'var(--cl-accent)', borderRadius: '50%', display: 'inline-block' }} />
-          Available
-        </span>
         <button
           onClick={toggleTheme}
           aria-label="Toggle dark mode"

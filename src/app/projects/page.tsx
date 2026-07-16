@@ -28,6 +28,16 @@ const projects = [
   },
   {
     id: 3,
+    name: 'Imposter',
+    tag: 'Party game, real-time multiplayer',
+    year: '2025',
+    stack: ['React', 'Vite', 'React Router', 'Supabase'],
+    role: 'Designed & built end-to-end',
+    desc: "Takes care of the fiddly part of Spyfall: privately distributing a secret word to every player without anyone seeing anyone else's screen. A host creates a room, shares a link, and each device instantly receives either the round word or an imposter notice. No accounts, no passing a phone around. Built with React, Vite, and React Router, backed entirely by Supabase Realtime with no custom server.",
+    link: 'https://impostergame-free.vercel.app/',
+  },
+  {
+    id: 4,
     name: 'Velocity Bingo',
     tag: 'Event networking game',
     year: '2025',
@@ -37,7 +47,7 @@ const projects = [
     link: 'https://velocity-bingo.vercel.app',
   },
   {
-    id: 4,
+    id: 5,
     name: 'MANFRD',
     tag: 'Personal site for a friend',
     year: '2024',

@@ -9,8 +9,9 @@ import { SERIF, SANS } from '@/lib/typography'
 const projects = [
   { id: 1, name: 'Good Study', tag: 'Note-taking, real-time sync', year: '2025' },
   { id: 2, name: 'Form', tag: 'AI personal trainer, computer vision', year: '2025' },
-  { id: 3, name: 'Velocity Bingo', tag: 'Event networking game', year: '2025' },
-  { id: 4, name: 'MANFRD', tag: 'Personal site for a friend', year: '2024' },
+  { id: 3, name: 'Imposter', tag: 'Party game, real-time multiplayer', year: '2025' },
+  { id: 4, name: 'Velocity Bingo', tag: 'Event networking game', year: '2025' },
+  { id: 5, name: 'MANFRD', tag: 'Personal site for a friend', year: '2024' },
 ]
 
 export default function Home() {
