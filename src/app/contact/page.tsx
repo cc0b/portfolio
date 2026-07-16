@@ -21,9 +21,9 @@ export default function Contact() {
 
   return (
     <div style={{ paddingTop: 76, minHeight: '100vh' }}>
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 280px', gap: 48, alignItems: 'start' }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
+      <div className="page-inner">
+        <div className="aside-grid">
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
             § 04
           </span>
 
@@ -33,7 +33,7 @@ export default function Contact() {
               style={{
                 fontFamily: SERIF,
                 fontWeight: 300,
-                fontSize: 64,
+                fontSize: 'clamp(36px, 5.5vw, 64px)',
                 letterSpacing: '-0.022em',
                 color: 'var(--cl-text)',
                 marginBottom: 64,
@@ -47,11 +47,8 @@ export default function Contact() {
             {links.map((l, i) => (
               <div
                 key={l.label}
+                className="contact-row"
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '100px 1fr auto',
-                  gap: 32,
-                  alignItems: 'baseline',
                   padding: '24px 0',
                   borderTop: i === 0 ? '1px solid var(--cl-border)' : 'none',
                   borderBottom: '1px solid var(--cl-border)',

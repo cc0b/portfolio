@@ -45,9 +45,10 @@ export default function About() {
           <path d="M10 3v14M3 10l7 7 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 280px', gap: 48, alignItems: 'start', marginBottom: 120 }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
+
+      <div className="page-inner">
+        <div className="aside-grid" style={{ marginBottom: 120 }}>
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
             § 03
           </span>
 
@@ -89,8 +90,8 @@ export default function About() {
         </div>
 
         {/* Tools */}
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 48, marginBottom: 100 }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>03</span>
+        <div className="margin-grid" style={{ marginBottom: 100 }}>
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>03</span>
           <div>
             <SectionHeader num="" label="Tools" />
             <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: 36, rowGap: 14 }}>
@@ -104,16 +105,16 @@ export default function About() {
           </div>
         </div>
 
-        {/* Off the clock */}
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 48, marginBottom: 100 }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>04</span>
+        {/* Other interests */}
+        <div className="margin-grid" style={{ marginBottom: 100 }}>
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>04</span>
           <div>
             <SectionHeader num="" label="Other interests" />
             <p style={{ fontFamily: SERIF, fontSize: 24, lineHeight: 1.5, color: 'var(--cl-text)', fontWeight: 400, fontStyle: 'italic', maxWidth: 720 }}>
               {off.map((o, i) => (
                 <Fragment key={o}>
                   <span style={{ fontStyle: 'normal' }}>{o}</span>
-                  {i < off.length - 1 ? <span style={{ color: 'var(--cl-muted)', fontStyle: 'normal' }}>{' · '}</span> : '.'}
+                  {i < off.length - 1 ? <span style={{ color: 'var(--cl-muted)', fontStyle: 'normal' }}>{' · '}</span> : '.'}
                 </Fragment>
               ))}
             </p>
@@ -121,8 +122,8 @@ export default function About() {
         </div>
 
         {/* CTA */}
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 48 }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>05</span>
+        <div className="margin-grid">
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>05</span>
           <div
             style={{
               paddingTop: 32,

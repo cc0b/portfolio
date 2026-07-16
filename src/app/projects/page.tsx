@@ -54,54 +54,32 @@ export default function Work() {
 
   return (
     <div style={{ paddingTop: 76, minHeight: '100vh' }}>
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '120px 56px' }}>
+      <div className="page-inner">
         <SectionHeader num="02" label="Work · An index" />
 
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 240px 1fr', gap: 48, alignItems: 'start' }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 8 }}>
+        <div className="projects-layout">
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 8 }}>
             § 02
           </span>
 
-          <div style={{ position: 'sticky', top: 110 }}>
+          <div className="projects-sidebar" style={{ position: 'sticky', top: 110 }}>
             {projects.map((p, i) => (
               <button
                 key={p.id}
                 onClick={() => setActive(p.id)}
                 style={{
-                  display: 'block',
-                  width: '100%',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                  padding: '14px 0',
+                  display: 'block', width: '100%',
+                  background: 'none', border: 'none', cursor: 'pointer',
+                  textAlign: 'left', padding: '14px 0',
                   borderTop: i === 0 ? '1px solid var(--cl-border)' : 'none',
                   borderBottom: '1px solid var(--cl-border)',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
-                  <span
-                    style={{
-                      fontFamily: SERIF,
-                      fontStyle: 'italic',
-                      fontSize: 12,
-                      color: active === p.id ? 'var(--cl-text)' : 'var(--cl-muted)',
-                      fontWeight: 300,
-                      width: 18,
-                    }}
-                  >
-                    {String(i + 1).padStart(2, '0')}
+                  <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 12, color: active === p.id ? 'var(--cl-text)' : 'var(--cl-muted)', fontWeight: 300, width: 18 }}>
+                    {String(i + 1).padStart(2, '00')}
                   </span>
-                  <span
-                    style={{
-                      fontFamily: SERIF,
-                      fontSize: 17,
-                      color: active === p.id ? 'var(--cl-text)' : 'var(--cl-muted)',
-                      fontWeight: 400,
-                      transition: 'color 0.3s',
-                      letterSpacing: '-0.005em',
-                    }}
-                  >
+                  <span style={{ fontFamily: SERIF, fontSize: 17, color: active === p.id ? 'var(--cl-text)' : 'var(--cl-muted)', fontWeight: 400, transition: 'color 0.3s', letterSpacing: '-0.005em' }}>
                     {p.name}
                   </span>
                 </div>
@@ -111,34 +89,18 @@ export default function Work() {
 
           <div key={current.id} style={{ animation: 'fadeIn 0.6s ease' }}>
             <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 16 }}>{current.tag}</p>
-            <h2
-              style={{
-                fontFamily: SERIF,
-                fontWeight: 400,
-                fontSize: 52,
-                letterSpacing: '-0.02em',
-                color: 'var(--cl-text)',
-                marginBottom: 28,
-                lineHeight: 1.05,
-              }}
-            >
+            <h2 style={{
+              fontFamily: SERIF, fontWeight: 400,
+              fontSize: 'clamp(32px, 4vw, 52px)',
+              letterSpacing: '-0.02em', color: 'var(--cl-text)', marginBottom: 28, lineHeight: 1.05,
+            }}>
               {current.name}
             </h2>
-            <p
-              style={{
-                fontFamily: SERIF,
-                fontSize: 19,
-                lineHeight: 1.7,
-                color: 'var(--cl-text)',
-                fontWeight: 400,
-                marginBottom: 48,
-                maxWidth: 580,
-              }}
-            >
+            <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, marginBottom: 48, maxWidth: 580 }}>
               {current.desc}
             </p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32, paddingTop: 32, borderTop: '1px solid var(--cl-border)' }}>
+            <div className="project-meta" style={{ paddingTop: 32, borderTop: '1px solid var(--cl-border)' }}>
               <div>
                 <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 10 }}>Year</p>
                 <p style={{ fontFamily: SERIF, fontSize: 16, color: 'var(--cl-text)' }}>{current.year}</p>
@@ -155,19 +117,10 @@ export default function Work() {
 
             {current.link && (
               <div style={{ marginTop: 56 }}>
-                <a
-                  href={current.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    fontFamily: SERIF,
-                    fontStyle: 'italic',
-                    fontSize: 17,
-                    color: 'var(--cl-text)',
-                    borderBottom: '1px solid var(--cl-text)',
-                    paddingBottom: 4,
-                  }}
-                >
+                <a href={current.link} target="_blank" rel="noreferrer" style={{
+                  fontFamily: SERIF, fontStyle: 'italic', fontSize: 17,
+                  color: 'var(--cl-text)', borderBottom: '1px solid var(--cl-text)', paddingBottom: 4,
+                }}>
                   Visit live site →
                 </a>
               </div>

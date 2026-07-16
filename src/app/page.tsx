@@ -18,51 +18,33 @@ export default function Home() {
 
   return (
     <div style={{ paddingTop: 76 }}>
-      <section style={{ minHeight: 'calc(100vh - 76px)', padding: '140px 56px 80px', maxWidth: 1180, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 220px', gap: 48, alignItems: 'start' }}>
-          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
+      <section className="page-section" style={{ minHeight: 'calc(100vh - 76px)' }}>
+        <div className="hero-grid">
+          <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
             § 01
           </span>
 
           <div>
-            <h1
-              style={{
-                fontFamily: SERIF,
-                fontWeight: 300,
-                fontSize: 'clamp(56px, 7.4vw, 108px)',
-                lineHeight: 1.02,
-                letterSpacing: '-0.025em',
-                color: 'var(--cl-text)',
-                marginBottom: 40,
-              }}
-            >
+            <h1 style={{
+              fontFamily: SERIF, fontWeight: 300,
+              fontSize: 'clamp(40px, 7.4vw, 108px)',
+              lineHeight: 1.02, letterSpacing: '-0.025em',
+              color: 'var(--cl-text)', marginBottom: 40,
+            }}>
               Caleb Li
             </h1>
-            <p
-              style={{
-                fontFamily: SERIF,
-                fontSize: 22,
-                fontWeight: 400,
-                lineHeight: 1.55,
-                color: 'var(--cl-text)',
-                maxWidth: 560,
-                marginBottom: 56,
-              }}
-            >
+            <p style={{
+              fontFamily: SERIF, fontSize: 22, fontWeight: 400,
+              lineHeight: 1.55, color: 'var(--cl-text)',
+              maxWidth: 560, marginBottom: 56,
+            }}>
               Business Analytics & Information Systems at the University of Auckland
             </p>
-            <div style={{ display: 'flex', gap: 28, alignItems: 'baseline' }}>
-              <Link
-                href="/projects"
-                style={{
-                  fontFamily: SERIF,
-                  fontStyle: 'italic',
-                  fontSize: 17,
-                  color: 'var(--cl-text)',
-                  borderBottom: '1px solid var(--cl-text)',
-                  paddingBottom: 4,
-                }}
-              >
+            <div style={{ display: 'flex', gap: 28, alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <Link href="/projects" style={{
+                fontFamily: SERIF, fontStyle: 'italic', fontSize: 17, color: 'var(--cl-text)',
+                borderBottom: '1px solid var(--cl-text)', paddingBottom: 4,
+              }}>
                 See work
               </Link>
               <Link href="/contact" style={{ fontFamily: SANS, fontSize: 13, color: 'var(--cl-muted)' }}>
@@ -87,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ padding: '0 56px 160px', maxWidth: 1180, margin: '0 auto' }}>
+      <section className="work-section">
         <SectionHeader num="01" label="Selected Work · 2024 – 2025" />
 
         {projects.map((p, i) => (
@@ -96,35 +78,26 @@ export default function Home() {
             href="/projects"
             onMouseEnter={() => setHovered(p.id)}
             onMouseLeave={() => setHovered(null)}
+            className="work-row"
             style={{
-              display: 'grid',
-              gridTemplateColumns: '60px 1fr 1fr 100px',
-              gap: 32,
-              alignItems: 'baseline',
-              padding: '32px 0',
               borderBottom: '1px solid var(--cl-border)',
               cursor: 'pointer',
               opacity: hovered !== null && hovered !== p.id ? 0.4 : 1,
               transition: 'opacity 0.5s',
             }}
           >
-            <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>
+            <span className="row-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>
               {String(i + 1).padStart(2, '0')}
             </span>
-            <div
-              style={{
-                fontFamily: SERIF,
-                fontSize: 28,
-                color: 'var(--cl-text)',
-                fontWeight: 400,
-                letterSpacing: '-0.01em',
-                transform: hovered === p.id ? 'translateX(8px)' : 'none',
-                transition: 'transform 0.4s ease',
-              }}
-            >
+            <div style={{
+              fontFamily: SERIF, fontSize: 28, color: 'var(--cl-text)',
+              fontWeight: 400, letterSpacing: '-0.01em',
+              transform: hovered === p.id ? 'translateX(8px)' : 'none',
+              transition: 'transform 0.4s ease',
+            }}>
               {p.name}
             </div>
-            <div style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 15, color: 'var(--cl-muted)', fontWeight: 400 }}>
+            <div className="row-tag" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 15, color: 'var(--cl-muted)', fontWeight: 400 }}>
               {p.tag}
             </div>
             <span style={{ fontFamily: SERIF, fontSize: 14, color: 'var(--cl-muted)', textAlign: 'right' }}>{p.year}</span>
