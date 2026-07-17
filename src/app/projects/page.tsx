@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -61,7 +61,7 @@ const projects = [
   },
 ]
 
-export default function Work() {
+function WorkInner() {
   const searchParams = useSearchParams()
   const [active, setActive] = useState(1)
   const current = projects.find((p) => p.id === active)!
@@ -154,5 +154,13 @@ export default function Work() {
       </div>
       <Footer />
     </div>
+  )
+}
+
+export default function Work() {
+  return (
+    <Suspense fallback={null}>
+      <WorkInner />
+    </Suspense>
   )
 }
