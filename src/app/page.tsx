@@ -76,7 +76,7 @@ export default function Home() {
         {projects.map((p, i) => (
           <Link
             key={p.id}
-            href="/projects"
+            href={`/projects?p=${p.id}`}
             onMouseEnter={() => setHovered(p.id)}
             onMouseLeave={() => setHovered(null)}
             className="work-row"

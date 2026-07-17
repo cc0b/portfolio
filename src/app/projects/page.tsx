@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 import { SERIF, LABEL } from '@/lib/typography'
@@ -59,8 +60,14 @@ const projects = [
 ]
 
 export default function Work() {
+  const searchParams = useSearchParams()
   const [active, setActive] = useState(1)
   const current = projects.find((p) => p.id === active)!
+
+  useEffect(() => {
+    const p = searchParams.get('p')
+    if (p) setActive(Number(p))
+  }, [searchParams])
 
   return (
     <div style={{ paddingTop: 76, minHeight: '100vh' }}>
