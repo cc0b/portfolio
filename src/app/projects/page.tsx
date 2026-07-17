@@ -16,6 +16,7 @@ const projects = [
     role: 'Designed & built end-to-end',
     desc: 'A full-stack note app with real-time sync, auth, and a public demo. Built because my notes were scattered across five apps and I wanted one place to put them.',
     link: 'https://goodgoodstudy.vercel.app/demo',
+    linkLabel: 'Visit live demo →',
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const projects = [
     role: 'Lead developer, team of three',
     desc: "Proof of concept for an AI personal trainer — uses MediaPipe to analyse squat form live via webcam, counting reps and flagging good and bad technique. The broader vision: train models on labelled form videos across sports to make coaching accessible and injury prevention more affordable than a human trainer.",
     link: 'https://formchecker-demo.vercel.app/',
+    linkLabel: 'Visit live demo →',
   },
   {
     id: 3,
@@ -135,10 +137,15 @@ export default function Work() {
             {current.link && (
               <div style={{ marginTop: 56 }}>
                 <a href={current.link} target="_blank" rel="noreferrer" style={{
-                  fontFamily: SERIF, fontStyle: 'italic', fontSize: 17,
-                  color: 'var(--cl-text)', borderBottom: '1px solid var(--cl-text)', paddingBottom: 4,
+                  display: 'inline-block',
+                  fontFamily: SERIF, fontStyle: 'italic', fontSize: 16,
+                  color: 'var(--cl-text)',
+                  border: '1px solid var(--cl-text)',
+                  padding: '12px 28px',
+                  borderRadius: 2,
+                  transition: 'background 0.2s, color 0.2s',
                 }}>
-                  Visit live site →
+                  {current.linkLabel ?? 'Visit live site →'}
                 </a>
               </div>
             )}
