@@ -1,24 +1,13 @@
-'use client'
-
-import { useState } from 'react'
 import Footer from '@/components/Footer'
 import { SERIF, LABEL } from '@/lib/typography'
 
 const links = [
-  { label: 'Email', value: 'caleb.nz.li@gmail.com', href: 'mailto:caleb.nz.li@gmail.com', copyable: true },
-  { label: 'LinkedIn', value: 'linkedin.com/in/caleblii', href: 'https://www.linkedin.com/in/caleblii/', copyable: false },
-  { label: 'Instagram', value: '@caleb.lii', href: 'https://www.instagram.com/caleb.lii/', copyable: false },
+  { label: 'Email', value: 'caleb.nz.li@gmail.com', href: 'mailto:caleb.nz.li@gmail.com', action: 'email me →' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/caleblii', href: 'https://www.linkedin.com/in/caleblii/', action: 'open →' },
+  { label: 'Instagram', value: '@caleb.lii', href: 'https://www.instagram.com/caleb.lii/', action: 'open →' },
 ]
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false)
-
-  function copy() {
-    navigator.clipboard.writeText('caleb.nz.li@gmail.com')
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
     <div style={{ paddingTop: 76, minHeight: '100vh' }}>
       <div className="page-inner">
@@ -63,33 +52,14 @@ export default function Contact() {
                 >
                   {l.value}
                 </a>
-                {l.copyable ? (
-                  <button
-                    onClick={copy}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      cursor: 'pointer',
-                      padding: 0,
-                      fontFamily: SERIF,
-                      fontStyle: 'italic',
-                      fontSize: 13,
-                      color: copied ? 'var(--cl-text)' : 'var(--cl-muted)',
-                      transition: 'color 0.2s',
-                    }}
-                  >
-                    {copied ? 'copied' : 'copy'}
-                  </button>
-                ) : (
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)' }}
-                  >
-                    open →
-                  </a>
-                )}
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)' }}
+                >
+                  {l.action}
+                </a>
               </div>
             ))}
           </div>
