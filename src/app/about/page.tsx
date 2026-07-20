@@ -78,7 +78,7 @@ export default function About() {
           {facts.map((f) => (
             <div key={f.k}>
               <p style={{ ...LABEL, color: 'var(--cl-muted)', fontSize: 10, marginBottom: 8 }}>{f.k}</p>
-              <p style={{ fontFamily: SERIF, fontSize: 13, color: 'var(--cl-text)', lineHeight: 1.6 }}>{f.v}</p>
+              <p style={{ fontFamily: SERIF, fontSize: 19, fontWeight: 400, color: 'var(--cl-text)', lineHeight: 1.7 }}>{f.v}</p>
             </div>
           ))}
         </div>
@@ -90,7 +90,7 @@ export default function About() {
             <SectionHeader num="" label="Tools" />
             <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: 36, rowGap: 14 }}>
               {stack.map((s, i) => (
-                <span key={s} style={{ fontFamily: SERIF, fontSize: 19, color: 'var(--cl-text)', fontWeight: 400 }}>
+                <span key={s} style={{ fontFamily: SERIF, fontSize: 19, color: 'var(--cl-dim)', fontWeight: 400 }}>
                   {s}
                   {i < stack.length - 1 && <span style={{ color: 'var(--cl-muted)' }}>,</span>}
                 </span>
@@ -104,7 +104,7 @@ export default function About() {
           <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>04</span>
           <div>
             <SectionHeader num="" label="Other interests" />
-            <p style={{ fontFamily: SERIF, fontSize: 24, lineHeight: 1.5, color: 'var(--cl-text)', fontWeight: 400, fontStyle: 'italic', maxWidth: 720 }}>
+            <p style={{ fontFamily: SERIF, fontSize: 24, lineHeight: 1.5, color: 'var(--cl-dim)', fontWeight: 400, fontStyle: 'italic', maxWidth: 720 }}>
               {off.map((o, i) => (
                 <Fragment key={o}>
                   <span style={{ fontStyle: 'normal' }}>{o}</span>
