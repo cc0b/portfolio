@@ -55,15 +55,9 @@ export default function About() {
 
           <div>
             <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 28 }}>About</p>
-            <h1
-              style={{
-                fontFamily: SERIF, fontWeight: 300, fontSize: 19,
-                letterSpacing: '-0.01em', color: 'var(--cl-text)',
-                marginBottom: 24, lineHeight: 1.7, maxWidth: 620,
-              }}
-            >
+            <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 620, marginBottom: 24 }}>
               I&apos;m Caleb, a Commerce student at the University of Auckland.
-            </h1>
+            </p>
             <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 620, marginBottom: 24 }}>
               I&apos;m majoring in Business Analytics &amp; Information Systems, with a Certificate in Web Development on the side.
             </p>
