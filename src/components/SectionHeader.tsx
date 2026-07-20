@@ -1,6 +1,6 @@
 import { SERIF, LABEL } from '@/lib/typography'
 
-export default function SectionHeader({ num, label }: { num: string; label: string }) {
+export default function SectionHeader({ num, label, labelColor }: { num: string; label: string; labelColor?: string }) {
   return (
     <div
       style={{
@@ -16,7 +16,7 @@ export default function SectionHeader({ num, label }: { num: string; label: stri
       <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>
         § {num}
       </span>
-      <span style={{ ...LABEL, color: 'var(--cl-muted)' }}>{label}</span>
+      <span style={{ ...LABEL, color: labelColor ?? 'var(--cl-muted)' }}>{label}</span>
     </div>
   )
 }

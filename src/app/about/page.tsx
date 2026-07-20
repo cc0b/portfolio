@@ -87,10 +87,10 @@ export default function About() {
         <div className="margin-grid" style={{ marginBottom: 100 }}>
           <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>03</span>
           <div>
-            <SectionHeader num="" label="Tools" />
+            <SectionHeader num="" label="Tools" labelColor="var(--cl-dim)" />
             <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: 36, rowGap: 14 }}>
               {stack.map((s, i) => (
-                <span key={s} style={{ fontFamily: SERIF, fontSize: 19, color: 'var(--cl-dim)', fontWeight: 400 }}>
+                <span key={s} style={{ fontFamily: SERIF, fontSize: 19, color: 'var(--cl-text)', fontWeight: 400 }}>
                   {s}
                   {i < stack.length - 1 && <span style={{ color: 'var(--cl-muted)' }}>,</span>}
                 </span>
@@ -103,8 +103,8 @@ export default function About() {
         <div className="margin-grid" style={{ marginBottom: 100 }}>
           <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300 }}>04</span>
           <div>
-            <SectionHeader num="" label="Other interests" />
-            <p style={{ fontFamily: SERIF, fontSize: 24, lineHeight: 1.5, color: 'var(--cl-dim)', fontWeight: 400, fontStyle: 'italic', maxWidth: 720 }}>
+            <SectionHeader num="" label="Other interests" labelColor="var(--cl-dim)" />
+            <p style={{ fontFamily: SERIF, fontSize: 24, lineHeight: 1.5, color: 'var(--cl-text)', fontWeight: 400, fontStyle: 'italic', maxWidth: 720 }}>
               {off.map((o, i) => (
                 <Fragment key={o}>
                   <span style={{ fontStyle: 'normal' }}>{o}</span>
