@@ -31,6 +31,16 @@ const projects = [
   },
   {
     id: 3,
+    name: 'NBA Analytics',
+    tag: 'Sports analytics, data visualization',
+    year: '2025',
+    stack: ['Python', 'FastAPI', 'SQLAlchemy', 'React', 'Vite', 'd3'],
+    role: 'Designed & built end-to-end',
+    desc: "A dashboard for comparing NBA players across eras — Allen Iverson's 2000–01 against Nikola Jokić's 2025–26, built on 5.9 million shot records spanning 30 seasons. stats.nba.com throttles deployed traffic aggressively, so nothing in the serving path touches it: a resumable ingest pipeline pulls the data offline into a local database, and a precompute step exports every payload as static JSON. Loads instantly, no backend to fall over, costs nothing to host.",
+    link: 'https://nba-players-analysis.vercel.app/',
+  },
+  {
+    id: 4,
     name: 'Imposter',
     tag: 'Party game, real-time multiplayer',
     year: '2025',
@@ -40,7 +50,7 @@ const projects = [
     link: 'https://impostergame-free.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Velocity Bingo',
     tag: 'Event networking game',
     year: '2025',
@@ -50,7 +60,7 @@ const projects = [
     link: 'https://velocity-bingo.vercel.app',
   },
   {
-    id: 5,
+    id: 6,
     name: 'MANFRD',
     tag: 'Personal site for a friend',
     year: '2024',
