@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 import { SERIF, SANS } from '@/lib/typography'
@@ -9,7 +9,7 @@ import { SERIF, SANS } from '@/lib/typography'
 const projects = [
   { id: 1, name: 'Good Study', tag: 'Note-taking, real-time sync', year: '2025' },
   { id: 2, name: 'Form', tag: 'AI personal trainer, computer vision', year: '2025' },
-  { id: 3, name: 'NBA Analytics', tag: 'Sports analytics, data visualization', year: '2025' },
+  { id: 3, name: 'NBA Analytics', tag: 'Sports analytics, data visualization', year: '2026' },
   { id: 4, name: 'Imposter', tag: 'Party game, real-time multiplayer', year: '2025' },
   { id: 5, name: 'Velocity Bingo', tag: 'Event networking game', year: '2025' },
   { id: 6, name: 'MANFRD', tag: 'Personal site for a friend', year: '2024' },
@@ -17,10 +17,17 @@ const projects = [
 
 export default function Home() {
   const [hovered, setHovered] = useState<number | null>(null)
+  const [arrowVisible, setArrowVisible] = useState(true)
+
+  useEffect(() => {
+    const onScroll = () => setArrowVisible(window.scrollY < 50)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <div style={{ paddingTop: 76 }}>
-      <section className="page-section" style={{ minHeight: 'calc(100vh - 76px)' }}>
+      <section className="page-section" style={{ minHeight: 'calc(100vh - 76px)', position: 'relative' }}>
         <div className="hero-grid">
           <span className="margin-num" style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'var(--cl-muted)', fontWeight: 300, paddingTop: 12 }}>
             § 01
@@ -69,10 +76,26 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <button
+          onClick={() => window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' })}
+          style={{
+            position: 'absolute', bottom: 40, left: '50%',
+            transform: 'translateX(-50%)',
+            opacity: arrowVisible ? 1 : 0, transition: 'opacity 0.4s ease',
+            animation: arrowVisible ? 'bounce 1.8s ease-in-out infinite' : 'none',
+            background: 'none', border: 'none', cursor: 'pointer', padding: 8,
+          }}
+          aria-label="Scroll down"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ color: 'var(--cl-muted)', display: 'block' }}>
+            <path d="M10 3v14M3 10l7 7 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
       </section>
 
       <section className="work-section">
-        <SectionHeader num="01" label="Selected Work · 2024 – 2025" />
+        <SectionHeader num="01" label="Selected Work · 2024 – 2026" />
 
         {projects.map((p, i) => (
           <Link

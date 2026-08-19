@@ -14,7 +14,7 @@ const projects = [
     year: '2025',
     stack: ['Next.js', 'React', 'Supabase', 'TypeScript'],
     role: 'Designed & built end-to-end',
-    desc: 'A full-stack note app with real-time sync, auth, and a public demo. Built because my notes were scattered across five apps and I wanted one place to put them.',
+    desc: 'A full-stack note app with real-time sync and auth. Built because my notes were scattered across five apps and I wanted one place to put them.',
     link: 'https://goodgoodstudy.vercel.app/demo',
     linkLabel: 'Visit live demo →',
   },
@@ -25,7 +25,8 @@ const projects = [
     year: '2025',
     stack: ['Python', 'MediaPipe'],
     role: 'Lead developer, team of three',
-    desc: "Proof of concept for an AI personal trainer — uses MediaPipe to analyse squat form live via webcam, counting reps and flagging good and bad technique. The broader vision: train models on labelled form videos across sports to make coaching accessible and injury prevention more affordable than a human trainer.",
+    desc: 'A proof of concept AI personal trainer that watches your squat form via webcam, counting reps and flagging technique in real time.',
+    tech: "Uses MediaPipe's pose estimation to track joint angles frame by frame. The broader vision: train models on labelled form videos across sports to make coaching accessible and injury prevention more affordable than a human trainer.",
     link: 'https://formchecker-demo.vercel.app/',
     linkLabel: 'Visit live demo →',
   },
@@ -33,10 +34,11 @@ const projects = [
     id: 3,
     name: 'NBA Analytics',
     tag: 'Sports analytics, data visualization',
-    year: '2025',
+    year: '2026',
     stack: ['Python', 'FastAPI', 'SQLAlchemy', 'React', 'Vite', 'd3'],
     role: 'Designed & built end-to-end',
-    desc: "A dashboard for comparing NBA players across eras — Allen Iverson's 2000–01 against Nikola Jokić's 2025–26, built on 5.9 million shot records spanning 30 seasons. stats.nba.com throttles deployed traffic aggressively, so nothing in the serving path touches it: a resumable ingest pipeline pulls the data offline into a local database, and a precompute step exports every payload as static JSON. Loads instantly, no backend to fall over, costs nothing to host.",
+    desc: "A dashboard for comparing NBA players across different eras, built on 5.9 million shot records spanning 30 seasons.",
+    tech: "stats.nba.com throttles deployed traffic aggressively, so nothing in the serving path touches it: a resumable ingest pipeline pulls the data offline into a local database, and a precompute step exports every payload as static JSON. Loads instantly, no backend to fall over, costs nothing to host.",
     link: 'https://nba-players-analysis.vercel.app/',
   },
   {
@@ -46,7 +48,8 @@ const projects = [
     year: '2025',
     stack: ['React', 'Vite', 'React Router', 'Supabase'],
     role: 'Designed & built end-to-end',
-    desc: "Takes care of the fiddly part of Spyfall: privately distributing a secret word to every player without anyone seeing anyone else's screen. A host creates a room, shares a link, and each device instantly receives either the round word or an imposter notice. No accounts, no passing a phone around. Built with React, Vite, and React Router, backed entirely by Supabase Realtime with no custom server.",
+    desc: "Takes care of the fiddly part of Spyfall: privately getting each player their secret word without anyone seeing anyone else's screen. No accounts, no passing a phone around.",
+    tech: "A host creates a room, shares a link, and each device instantly receives either the round word or an imposter notice. Built with React, Vite, and React Router, backed entirely by Supabase Realtime with no custom server.",
     link: 'https://impostergame-free.vercel.app/',
   },
   {
@@ -125,9 +128,14 @@ function WorkInner() {
             }}>
               {current.name}
             </h2>
-            <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, marginBottom: 48, maxWidth: 580 }}>
+            <p style={{ fontFamily: SERIF, fontSize: 19, lineHeight: 1.7, color: 'var(--cl-text)', fontWeight: 400, marginBottom: current.tech ? 20 : 48, maxWidth: 580 }}>
               {current.desc}
             </p>
+            {current.tech && (
+              <p style={{ fontFamily: SERIF, fontSize: 16, lineHeight: 1.7, color: 'var(--cl-dim)', fontWeight: 400, marginBottom: 48, maxWidth: 580 }}>
+                {current.tech}
+              </p>
+            )}
 
             <div className="project-meta" style={{ paddingTop: 32, borderTop: '1px solid var(--cl-border)' }}>
               <div>
