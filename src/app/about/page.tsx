@@ -130,7 +130,7 @@ export default function About() {
             }}
           >
             <p style={{ fontFamily: SERIF, fontSize: 22, color: 'var(--cl-text)', fontWeight: 400, maxWidth: 540 }}>
-              Open to internships, freelance, and projects.
+              Open to internships and graduate roles.
             </p>
             <Link
               href="/contact"

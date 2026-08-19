@@ -68,7 +68,7 @@ export default function Home() {
                 Currently
               </p>
               <p style={{ fontFamily: SERIF, fontSize: 14, lineHeight: 1.6, color: 'var(--cl-text)', fontWeight: 400 }}>
-                Second-year Commerce student. Seeking internships and freelance opportunities.
+                Second-year Commerce student. Seeking internships and graduate roles.
               </p>
               <p style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, lineHeight: 1.6, color: 'var(--cl-muted)', marginTop: 16, fontWeight: 300 }}>
                 Last updated <span style={{ fontStyle: 'normal' }}>May 2026</span>
