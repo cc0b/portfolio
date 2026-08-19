@@ -7,9 +7,9 @@ import SectionHeader from '@/components/SectionHeader'
 import { SERIF, SANS } from '@/lib/typography'
 
 const projects = [
-  { id: 1, name: 'Good Study', tag: 'Note-taking, real-time sync', year: '2025' },
-  { id: 2, name: 'Form', tag: 'AI personal trainer, computer vision', year: '2025' },
-  { id: 3, name: 'NBA Analytics', tag: 'Sports analytics, data visualization', year: '2026' },
+  { id: 1, name: 'NBA Analytics', tag: 'Sports analytics, data visualization', year: '2026' },
+  { id: 2, name: 'Good Study', tag: 'Note-taking, real-time sync', year: '2025' },
+  { id: 3, name: 'Form', tag: 'AI personal trainer, computer vision', year: '2025' },
   { id: 4, name: 'Imposter', tag: 'Party game, real-time multiplayer', year: '2025' },
   { id: 5, name: 'Velocity Bingo', tag: 'Event networking game', year: '2025' },
   { id: 6, name: 'MANFRD', tag: 'Personal site for a friend', year: '2024' },
