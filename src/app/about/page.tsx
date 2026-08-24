@@ -2,9 +2,9 @@
 
 import { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
-import Footer from '@/components/Footer'
-import SectionHeader from '@/components/SectionHeader'
-import { SERIF, LABEL } from '@/lib/typography'
+import Footer from '../../components/Footer'
+import SectionHeader from '../../components/SectionHeader'
+import { SERIF, LABEL } from '../../lib/typography'
 
 const facts = [
   { k: 'Education', v: 'BCom · Business Analytics & Information Systems' },

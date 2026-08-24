@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Footer from '@/components/Footer'
-import { SERIF, LABEL } from '@/lib/typography'
+import Footer from '../../components/Footer'
+import { SERIF, LABEL } from '../../lib/typography'
 
 export default function Contact() {
   const [copied, setCopied] = useState(false)
