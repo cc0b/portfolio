@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import Footer from '@/components/Footer'
-import SectionHeader from '@/components/SectionHeader'
-import { SERIF, SANS } from '@/lib/typography'
+import Footer from '../components/Footer'
+import SectionHeader from '../components/SectionHeader'
+import { SERIF, SANS } from '../lib/typography'
 
 const projects = [
   { id: 1, name: 'NBA Analytics', tag: 'Sports analytics, data visualization', year: '2026' },

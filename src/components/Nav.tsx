@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { SERIF, LABEL } from '@/lib/typography'
+import { SERIF, LABEL } from '../lib/typography'
 
 const LINKS = [
   { label: 'Home', href: '/' },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Newsreader, Inter } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
-import Nav from '@/components/Nav'
+import Nav from '../components/Nav'
 
 const newsreader = Newsreader({
   subsets: ['latin'],

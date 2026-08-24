@@ -1,4 +1,4 @@
-import { SERIF } from '@/lib/typography'
+import { SERIF } from '../lib/typography'
 
 export default function Footer() {
   return (

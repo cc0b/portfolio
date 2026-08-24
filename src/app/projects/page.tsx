@@ -2,9 +2,9 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
-import Footer from '@/components/Footer'
-import SectionHeader from '@/components/SectionHeader'
-import { SERIF, LABEL } from '@/lib/typography'
+import Footer from '../../components/Footer'
+import SectionHeader from '../../components/SectionHeader'
+import { SERIF, LABEL } from '../../lib/typography'
 
 const projects = [
   {

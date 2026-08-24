@@ -1,4 +1,4 @@
-import { SERIF, LABEL } from '@/lib/typography'
+import { SERIF, LABEL } from '../lib/typography'
 
 export default function SectionHeader({ num, label, labelColor }: { num: string; label: string; labelColor?: string }) {
   return (
