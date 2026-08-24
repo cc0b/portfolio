@@ -73,12 +73,16 @@ export default function About() {
           />
         </div>
 
-        {/* Quick facts — horizontal row */}
-        <div className="about-facts">
+        {/* Quick facts — vertical list */}
+        <div style={{ borderTop: '1px solid var(--cl-border)', marginBottom: 80 }}>
           {facts.map((f) => (
-            <div key={f.k}>
-              <p style={{ ...LABEL, color: 'var(--cl-muted)', fontSize: 10, marginBottom: 8 }}>{f.k}</p>
-              <p style={{ fontFamily: SERIF, fontSize: 19, fontWeight: 400, color: 'var(--cl-text)', lineHeight: 1.7 }}>{f.v}</p>
+            <div key={f.k} style={{
+              display: 'grid', gridTemplateColumns: '140px 1fr', gap: 24,
+              padding: '14px 0', borderBottom: '1px solid var(--cl-border)',
+              alignItems: 'baseline',
+            }}>
+              <span style={{ ...LABEL, color: 'var(--cl-muted)', fontSize: 10 }}>{f.k}</span>
+              <span style={{ fontFamily: SERIF, fontSize: 16, color: 'var(--cl-text)', fontWeight: 400, lineHeight: 1.6 }}>{f.v}</span>
             </div>
           ))}
         </div>

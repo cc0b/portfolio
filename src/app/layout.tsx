@@ -9,12 +9,16 @@ const newsreader = Newsreader({
   weight: ['300', '400', '500'],
   style: ['normal', 'italic'],
   variable: '--font-newsreader',
+  display: 'swap',
+  preload: false,
 })
 
 const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-inter',
+  display: 'swap',
+  preload: false,
 })
 
 export const metadata: Metadata = {
