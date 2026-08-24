@@ -40,7 +40,6 @@ const projects = [
     role: 'Lead developer, team of three',
     desc: 'A proof of concept AI personal trainer that watches your squat form via webcam, counting reps and flagging technique in real time.',
     tech: "Uses MediaPipe's pose estimation to track joint angles frame by frame. The broader vision: train models on labelled form videos across sports to make coaching accessible and injury prevention more affordable than a human trainer.",
-    image: '/previews/form.png',
     link: 'https://formchecker-demo.vercel.app/',
     linkLabel: 'Visit live demo →',
   },
