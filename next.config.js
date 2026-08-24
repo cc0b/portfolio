@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  generateBuildId: () => 'build-' + Date.now(),
+  webpack: (config) => {
+    config.cache = false
+    return config
+  },
   images: {
     remotePatterns: [
       {
