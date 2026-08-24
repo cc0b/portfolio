@@ -125,16 +125,6 @@ function WorkInner() {
           </div>
 
           <div key={current.id} style={{ animation: 'fadeIn 0.6s ease' }}>
-            {current.image && (
-              <img
-                src={current.image}
-                alt={`${current.name} preview`}
-                style={{
-                  width: '100%', display: 'block', marginBottom: 36,
-                  border: '1px solid var(--cl-border)', borderRadius: 4,
-                }}
-              />
-            )}
             <p style={{ ...LABEL, color: 'var(--cl-muted)', marginBottom: 16 }}>{current.tag}</p>
             <h2 style={{
               fontFamily: SERIF, fontWeight: 400,
@@ -150,6 +140,16 @@ function WorkInner() {
               <p style={{ fontFamily: SERIF, fontSize: 16, lineHeight: 1.7, color: 'var(--cl-dim)', fontWeight: 400, marginBottom: 48, maxWidth: 580 }}>
                 {current.tech}
               </p>
+            )}
+            {current.image && (
+              <img
+                src={current.image}
+                alt={`${current.name} preview`}
+                style={{
+                  width: '100%', display: 'block', marginBottom: 48,
+                  border: '1px solid var(--cl-border)', borderRadius: 4,
+                }}
+              />
             )}
 
             <div className="project-meta" style={{ paddingTop: 32, borderTop: '1px solid var(--cl-border)' }}>
