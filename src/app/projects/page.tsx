@@ -91,7 +91,7 @@ function WorkInner() {
 
   return (
     <div style={{ paddingTop: 76, minHeight: '100vh' }}>
-      <div className="page-inner">
+      <div className="page-inner" style={{ paddingTop: 40 }}>
         <SectionHeader num="02" label="Work · An index" />
 
         <div className="projects-layout">
