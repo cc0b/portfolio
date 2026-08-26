@@ -142,14 +142,19 @@ function WorkInner() {
               </p>
             )}
             {current.image && (
-              <img
-                src={current.image}
-                alt={`${current.name} preview`}
-                style={{
-                  width: '100%', display: 'block', marginBottom: 48,
-                  border: '1px solid var(--cl-border)', borderRadius: 4,
-                }}
-              />
+              <a href={current.link} target="_blank" rel="noreferrer" style={{ display: 'block', marginBottom: 48 }}>
+                <img
+                  src={current.image}
+                  alt={`${current.name} preview`}
+                  style={{
+                    width: '100%', display: 'block',
+                    border: '1px solid var(--cl-border)', borderRadius: 4,
+                    cursor: 'pointer', transition: 'opacity 0.2s', opacity: 1,
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = '0.8')}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                />
+              </a>
             )}
 
             <div className="project-meta" style={{ paddingTop: 32, borderTop: '1px solid var(--cl-border)' }}>
